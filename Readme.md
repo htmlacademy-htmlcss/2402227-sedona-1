@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Alexandra Kuznetsova](https://up.htmlacademy.ru/htmlcss-individual/1/user/2402227).
-* Наставник: [Сергей Зубов] (https://htmlacademy.ru/profile/serj)
+* Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/serj)
 
 ---
 
