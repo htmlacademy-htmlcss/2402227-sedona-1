@@ -48,8 +48,8 @@
 
 body {
     font-family: "PT Sans", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 21px;
     color: #333;
     background-color: white;
 }
@@ -72,6 +72,7 @@ body {
     background-repeat: no-repeat;
 }
 
+/*Стилизация смысловых заголовков H2 уровня*/
 .title {
     text-align: center;
     font-size: 30px;
@@ -81,6 +82,7 @@ body {
     color: #000;
 }
 
+/*Стилизация смысловых описаний H2 уровня*/
 .description {
     text-align: center;
     font-size: 22px;
@@ -89,7 +91,9 @@ body {
     color: #000;
 }
 
-.advantages-title, .servises-title {
+/*Стилизация смысловых заголовков H3 уровня*/
+.advantages-title,
+.servises-title h2 {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
@@ -97,9 +101,92 @@ body {
     text-transform: uppercase;
 }
 
-.advantags-description, .servises-description {
+/*Стилизация смысловых описаний H3 уровня*/
+.advantags-description,
+.servises-description p {
     text-align: center;
     font-size: 18px;
     font-weight: 400;
     line-height: 21px;
 }
+
+/*Стилизация блоков Преимущества И Услуги*/
+.advantages-list,
+.servises-list {
+    list-style: none;
+}
+
+.advantages-item-city,
+.advantages-item-devil {
+    background-color: #82B3D3;
+    padding: 103px 85px;
+    width: 400;
+    height: 385;
+    color: #FFF;
+}
+
+.advantages-item-squere,
+.advantages-item-tourists {
+    background-color: rgba(131, 179, 211, 0.12);
+    padding: 103px 85px;
+    width: 400;
+    height: 385;
+    color: #000;
+}
+
+.advantages-item-road {
+    background-color: rgba(131, 179, 211, 0.20);
+    padding: 103px 85px;
+    width: 400;
+    height: 385;
+    color: #000;
+}
+
+.servises-item-house,
+.servises-item-suvenirs {
+    background-color: rgba(131, 179, 211, 0.12);
+    padding: 103px 85px;
+    width: 400;
+    height: 385;
+    color: #000;
+}
+
+.servises-item-food {
+    background-color: none;
+    padding: 103px 85px;
+    width: 400;
+    height: 385;
+    color: #000;
+}
+
+
+
+
+
+
+
+/* одна из попыток стилизовать блоки
+.advantages-list ul li:first-child {
+    background-color: #82B3D3;
+    padding: 103px 85px;
+    width: 400;
+    height: 385;
+}
+.advantages-list ul li:nth-child(even) {
+    background-color: rgba(131, 179, 211, 0.12);
+    padding: 103px 85px;
+    width: 400;
+    height: 385;
+}
+.advantages-list ul li:nth-child(odd) {
+    background-color: rgba(131, 179, 211, 0.20);
+    padding: 103px 85px;
+    width: 400;
+    height: 385;
+}
+.advantages-list ul li:last-child {
+    background-color: #82B3D3;
+    padding: 103px 85px;
+    width: 400;
+    height: 385;
+}*/
