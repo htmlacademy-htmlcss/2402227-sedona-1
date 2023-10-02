@@ -9,7 +9,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo">
-          <img class="page-header-logo" id="logo-icons" src="../images/logo-icons/header-logo.svg" alt="Логотип города Седона" width="140" height="70">
+          <img class="page-header-logo" id="logo-icons" src="/images/logo-icons/header-logo.svg" alt="Логотип города Седона" width="140" height="70">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -19,27 +19,23 @@
             <a class="navigation-link">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="../catalog.html">Гостиницы</a>
+            <a class="navigation-link" href="/catalog.html">Гостиницы</a>
           </li>
         </ul>
 
         <ul class="navigation-user">
           <li class="navigation-item">
             <a class="navigation-link">
-              <img class="navigation-search" src="../images/elements/icon-search.svg" alt="Форма поиска по сайту" width="18" height="18">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link">
-              <img class="navigation-favourites" src="../images/elements/icon-favoriets.svg" alt="Избранные гостиницы" width="20" height="20">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link">
-              <button class="navigation-button" type="submit">Хочу сюда</button>
-            </a>
+            <button class="navigation-button" type="button">Хочу сюда</button>
           </li>
         </ul>
       </nav>
@@ -47,9 +43,9 @@
 
     <main class="main-page">
       <h1 class="visually-hidden">О Седоне</h1>
-      <img class="main-page-welcome-logo" src="../images/logo-icons/welcome-logo.svg" alt="Логотип городка Седона" width="458" height="352">
+      <!--<img class="main-page-welcome-logo" src="/images/logo-icons/welcome-logo.svg" alt="Логотип городка Седона" width="458" height="352">
 
-      <!--<section class="main-page-welcome-background">
+      <section class="main-page-welcome-background">
         <h2 class="visually-hidden">Welcome</h2>
       </section>-->
 
@@ -63,7 +59,7 @@
           <ul class="advantages-list">
             <li class="advantages-item-city">
               <h3 class="advantages-title">Настоящий городок</h3>
-              <img class="description-item" id="tru-city" src="../images/pictures/Tru-city.jpg" alt="Настоящий городок" width="800" height="385">
+              <img class="description-item" id="tru-city" src="/images/pictures/Tru-city.jpg" alt="Настоящий городок" width="800" height="385">
               <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </li>
             <li class="advantages-item-squere">
@@ -80,7 +76,7 @@
             </li>
             <li class="advantages-item-devil">
               <h3 class="advantages-title">Там есть мост дьявола</h3>
-              <img class="description-item" id="devils-bridge" src="../images/pictures/Devil's-bridge.jpg" alt="Дом дьявола" width="800" height="385">
+              <img class="description-item" id="devils-bridge" src="/images/pictures/Devil's-bridge.jpg" alt="Дом дьявола" width="800" height="385">
               <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </li>
           </ul>
@@ -98,17 +94,14 @@
           <ul class="servises-list">
             <li class="servises-item-house">
               <h3 class="servises-title">Жилье</h3>
-              <img class="servises-item" id="home" src="../images/advantages-icons/icon-home.svg" alt="Жилье" width="75" height="72">
               <p class="servises-description">Рекомендуем пожить в настоящем мотеле, все как в кино</p>
             </li>
             <li class="servises-item-food">
               <h3 class="servises-title">Еда</h3>
-              <img class="servises-item" id="food" src="../images/advantages-icons/icon-food.svg" alt="Еда" width="75" height="72">
               <p class="servises-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="servises-item-suvenirs">
               <h3 class="servises-title">Сувениры</h3>
-              <img class="servises-item" id="suvenirs" src="../images/advantages-icons/icon-suvenirs.svg" alt="Сувениры" width="75" height="72">
               <p class="servises-description">Не только китайского, но и настоящего местного производства!</p>
             </li>
           </ul>
@@ -118,10 +111,9 @@
       <section class="catalog-details">
         <h2 class="title">Заинтересовались?</h2>
         <p class="description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="catalog-search" href="../catalog.html">
-          <span class="visually-hidden">Поиск гостиницы в Седоне</span>
-          <button class="search-hotel-catalog" type="submit">Поиск гостиницы в Седоне</button>
-        </a>
+        <form class="visually-hidden catalog-search" href="/catalog.html">Поиск гостиницы в Седоне
+          <button class="search-hotel-catalog" type="button">Поиск гостиницы в Седоне</button>
+        </form>
       </section>
     </main>
 
@@ -130,9 +122,7 @@
         <h2 class="title">Подпишитесь на рассылку</h2>
         <p class="description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="newsletter-email">
-            <span class="visually-hidden">e-mail</span>
-          </label>
+          <label class="visually-hidden" for="newsletter-email">e-mail</label>
           <input type="email" placeholder="Ваш e-mail" name="newsletter-email" id="newsletter-email" required>
             <button class="newslatter-submit" type="submit">Подписаться</button>
         </form>
@@ -143,19 +133,16 @@
           <li class="footer-social-item">
             <a class="button" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Vkontakte</span>
-              <img class="footer-social-icons" id="social-icon-vkontakte" src="../images/social-icons/social-vk.svg" alt="Vkontakte" width="24" height="14">
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
-              <img class="footer-social-icons" id="social-icon-telegram" src="../images/social-icons/social-tg.svg" alt="Telegram" width="18" height="16">
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Youtube</span>
-              <img class="footer-social-icons" id="social-icon-youtube" src="../images/social-icons/social-youtube.svg" alt="Youtube" width="22" height="17">
             </a>
           </li>
         </ul>
@@ -169,7 +156,7 @@
       <p class="site-production">
         <a class="htmlacademy-link" href="https://htmlacademy.ru/">
           <span class="visually-hidden">Сделано в</span>
-          <img class="footer-production-logo" src="../images/logo-icons/footter-logo.HTMLAcademy.svg" alt="Логотип HTML Academy" width="115" height="33">
+          <img class="footer-production-logo" src="/images/logo-icons/footer-logo.svg" alt="Логотип HTML Academy" width="115" height="33">
         </a>
       </p>
     </footer>
