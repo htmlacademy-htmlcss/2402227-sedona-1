@@ -5,7 +5,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(../fonts/ptsans-400.woff2) format("woff2");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
 }
 
 @font-face {
@@ -13,38 +13,13 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(../fonts/ptsans-700.woff2) format("woff2");
-}
-
-@font-face {
-    font-family: "PT Sans";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url(../fonts/ptsans-400.woff2) format(woff2);
-}
-
-@font-face {
-    font-family: "PT Sans";
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url(../fonts/ptsans-700.woff2) format(woff2);
-}
-
-@font-face {
-    font-family: "PT Sans Narrow";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(../fonts/ptsans-700.woff2) format(woff2);
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
 /* logo */
-.main-page-welcome-logo {
-    background-image: url(../images/pictures/Sedona-main.jpg);
-    width: "1200";
-    height: "485";
+
+.main-page-welcome {
+    background-image: ("/images/pictures/sedona-main.jpg");
 }
 
 /* body */
@@ -54,27 +29,48 @@ body {
     font-size: 18px;
     line-height: 21px;
     color: #333;
-    background-color: white;
+    background-color: #FFF;
+}
+
+.clear-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* header */
 
 .page-header {
-    background-color: #FFF;
+    background: #FFF;
+    color: #333;
 }
 
-.navigation-link {
+.navigation-list {
+    font-family: "PT Sans", sans-serif;
+    color: inherit;
+}
+
+/*.navigation-link {
+    font-family: "PT Sans", sans-serif;
+    color: inherit;
+}*/
+
+.navigation-item {
     font-size: 20px;
+    font-weight: 700;
     line-height: 24px;
     text-align: center;
     text-decoration: none;
     text-transform: capitalize;
 }
 
+
+
+
 /* main */
 
 .main-page {
-    background-image: url(../images/pictures/Sedona-main.jpg);
+    background-image: url("../images/pictures/Sedona-main.jpg");
     background-size: 1200px 450px;
     background-repeat: no-repeat;
 }
@@ -121,56 +117,42 @@ body {
 }
 
 /*Стилизация блоков Преимущества И Услуги*/
-
-.advantages-list,
-.servises-list {
-    list-style: none;
+.item {
+    padding: 103px 85px;
+    width: 400px;
+    height: 385px;
+    color: #000;
 }
 
 .advantages-item-city,
 .advantages-item-devil {
     background-color: #82B3D3;
-    padding: 103px 85px;
-    width: 400;
-    height: 385;
     color: #FFF;
 }
 
 .advantages-item-squere,
 .advantages-item-tourists {
     background-color: rgba(131, 179, 211, 0.12);
-    padding: 103px 85px;
-    width: 400;
-    height: 385;
-    color: #000;
 }
 
 .advantages-item-road {
     background-color: rgba(131, 179, 211, 0.20);
-    padding: 103px 85px;
-    width: 400;
-    height: 385;
-    color: #000;
 }
 
-.servises-item-house,
+.servises-item-house {
+    background-color: rgba(131, 179, 211, 0.12);
+    img: url("..//images/advantages-icons/icon-house.svg");
+}
+
 .servises-item-suvenirs {
     background-color: rgba(131, 179, 211, 0.12);
-    padding: 103px 85px;
-    width: 400;
-    height: 385;
-    color: #000;
 }
 
 .servises-item-food {
     background-color: none;
-    padding: 103px 85px;
-    width: 400;
-    height: 385;
-    color: #000;
 }
 
-/* footer */ 
+/* footer */
 
 
 
