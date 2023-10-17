@@ -16,13 +16,24 @@
     src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
+/* Общее выравнивание сайта */
+
+html {
+    height: 100%;
+}
+
 /* logo */
 
-
+.navigation-logo {
+    width: 140px;
+}
 
 /* body */
 
 body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
@@ -43,8 +54,46 @@ body {
     color: #333;
 }
 
+/* Выравнивание меню */
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 1200px;
+    height: 64px;
+    margin: 0 auto;
+}
+
+.navigation-logo {
+    order: -1;
+}
+
 .navigation-list {
     font-family: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    gap: 8px;
+    width: 328px;
+    margin: 0;
+    padding: 20px 16px;
+}
+
+.navigation-user {
+    font-family: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    gap: 8px;
+    width: 268px;
+    margin: 0;
+    padding: 20px 16px;
 }
 
 .navigation-item {
@@ -60,11 +109,22 @@ body {
     text-decoration: underline;
 }
 
-/* main */
+/* main - общая стилизация главной страницы */
+
+.page-container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.main-container {
+    flex-grow: 1;
+}
 
 /*Стилизация картинок и графики на главной странице*/
 
 .welcome-picture {
+    width: 1200px;
+    height: 485px;
     background-image: url(/images/pictures/sedona-main.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -122,12 +182,19 @@ body {
 
 /*Стилизация блоков Преимущества И Услуги*/
 .items-list {
-    padding: 103px 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 85px 103px;
+    margin: 0;
     color: #000;
+    width: 400px;
+    height: 385px;
 }
 
 .advantages-item-city,
 .advantages-item-devil {
+    display: flex;
     background-color: #82B3D3;
     color: #FFF;
 }
@@ -153,11 +220,12 @@ body {
     background-color: none;
 }
 
-/* footer */
-
 /*Фоновая картинка подписки по почте*/
 
 .main-newslatter {
+    width: auto;
+    height: auto;
+    padding: 96px 258px 104px 258px;
     background-image: url("/images/pictures/subscribe.jpg");
     background-position: center;
     align-items: center;
@@ -175,12 +243,56 @@ body {
     color: #FFF;
 }
 
+/* footer */
+
+.page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding: 70px 40px 30px;
+    width: 1060px;
+    height: auto;
+}
+
+/* footer. Социальные сети */
+
+.footer-social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+
+/* Контакты */
+
+.footer-contacts {
+    display: flex;
+    justify-content: center;
+    width: 331px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.footer-contacts-address-phone {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.site-production {
+
+}
 
 /* Catalog*/
 
-.catalog-page {
+.catalog-header-section {
+    padding: 35px 70px 70px 70px;
     background-image: url("/images/pictures/catalog-page-background.png");
-    background-position: center;
+    background-color: #FFF;
+    background-position: top;
     align-items: center;
     background-repeat: no-repeat;
     background-size: 100%;
