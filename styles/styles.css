@@ -20,6 +20,8 @@
 
 html {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .visually-hidden {
@@ -34,16 +36,19 @@ overflow: hidden;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    width: 1200px;
-    margin: 0 auto;
-    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
     color: #333;
     background-color: #FFF;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 100%;
 }
 
 .page-header {
@@ -300,7 +305,7 @@ body {
 /* Стилизация кнопки - переход в каталог */
 
 .catalog-search {
-    display: inline-flex;
+    display: block;
     padding: 8px 50px;
     align-self: center;
     font-family: PT Sans;
@@ -391,6 +396,7 @@ body {
 }
 
 .footer-social-item {
+    display: inline;
     align-items: center;
     width: 27px;
 }
