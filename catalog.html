@@ -8,51 +8,50 @@
   <!--<link rel="stylesheet" href=""> -->
 </head>
 
-<body>
-  <body class="page-container">
-    <!-- заголовок -->
-    <header class="page-header">
-      <nav class="navigation">
-        <!-- логотип -->
-        <a class="navigation-logo">
-          <img class="page-header-logo" src="/images/logo-icons/header-logo.svg" alt="Логотип города Седона" width="140" height="70">
-        </a>
-        <!-- основное меню -->
-        <ul class="navigation-menu clear-list">
-          <li class="navigation-menu-item">
-            <a class="navigation-link" href="/index.html">Главная</a>
-          </li>
-          <li class="navigation-menu-item">
-            <a class="navigation-link" href="#">О Седоне</a>
-          </li>
-          <li class="navigation-menu-item">
-            <a class="navigation-link navigation-link-current" href="">Гостиницы</a>
-          </li>
-        </ul>
-        <!-- вспомогательное меню -->
-        <ul class="navigation-menu navigation-attributes clear-list">
-          <li class="navigation-menu-item">
-            <a class="navigation-link search" href="#">
-              <span class="visually-hidden">Поиск</span>
-            </a>
-          </li>
-          <li class="navigation-menu-item">
-            <a class="navigation-link favourites" href="#">
-              <span class="visually-hidden">Избранное</span>
-              <span class="favourites-number">12</span>
-            </a>
-          </li>
-          <li class="navigation-menu-item">
-            <button class="navigation-button" type="button">Хочу сюда</button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<body class="page-container">
+  <!-- заголовок -->
+  <header class="page-header">
+    <nav class="navigation">
+      <!-- логотип -->
+      <a class="navigation-logo">
+        <img class="page-header-logo" src="/images/logo-icons/header-logo.svg" alt="Логотип города Седона" width="140" height="70">
+      </a>
+      <!-- основное меню -->
+      <ul class="navigation-menu clear-list">
+        <li class="navigation-menu-item">
+          <a class="navigation-link" href="/index.html">Главная</a>
+        </li>
+        <li class="navigation-menu-item">
+          <a class="navigation-link" href="#">О Седоне</a>
+        </li>
+        <li class="navigation-menu-item">
+          <a class="navigation-link navigation-link-current" href="">Гостиницы</a>
+        </li>
+      </ul>
+      <!-- вспомогательное меню -->
+      <ul class="navigation-menu navigation-attributes clear-list">
+        <li class="navigation-menu-item">
+          <a class="navigation-link search" href="#">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </li>
+        <li class="navigation-menu-item">
+          <a class="navigation-link favourites" href="#">
+            <span class="visually-hidden">Избранное</span>
+            <span class="favourites-number">12</span>
+          </a>
+        </li>
+        <li class="navigation-menu-item">
+          <button class="navigation-button" type="button">Хочу сюда</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
 
     <main class="catalog-main-page">
 
-      <!--Хлебный крошки -->
+    <!--Хлебный крошки -->
       <section class="catalog-main-section">
         <div class="catalog-filters-container background-sadona-catalog">
           <h1 class="catalog-main-header catalog-header">Гостиницы Седоны
@@ -72,71 +71,71 @@
           <!-- Фильтры каталога -->
           <article class="catalog-hotels-filters">
             <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
-              <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-                <fieldset class="catalog-filter-group infrastructure">
-                  <legend class="catalog-filter-title">Инфраструктура:</legend>
-                  <ul class="catalog-filter-list clear-list">
-                    <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="checkbox" name="swimming-pool" checked>Бассейн
-                      </label>
-                    </li>
-                    <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="checkbox" name="paking" checked>Парковка
-                      </label>
-                    </li>
-                    <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="checkbox" name="wifi">Wi-Fi
-                      </label>
-                    </li>
-                  </ul>
-                </fieldset>
+            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+              <fieldset class="catalog-filter-group infrastructure">
+                <legend class="catalog-filter-title">Инфраструктура:</legend>
+                <ul class="catalog-filter-list clear-list">
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="swimming-pool" checked>Бассейн
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="paking" checked>Парковка
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="wifi">Wi-Fi
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
 
-                <fieldset class="catalog-filter-group house-type">
-                  <legend class="catalog-filter-title">Тип жилья:</legend>
-                  <ul class="catalog-filter-list clear-list">
-                    <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" name="product-group" value="hotel" checked>Гостиница
-                      </label>
-                    </li>
-                    <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" name="product-group" value="motel">Мотель
-                      </label>
-                    </li>
-                    <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" name="product-group" value="appartments">Апартаменты
-                      </label>
-                    </li>
-                  </ul>
-                </fieldset>
+              <fieldset class="catalog-filter-group house-type">
+                <legend class="catalog-filter-title">Тип жилья:</legend>
+                <ul class="catalog-filter-list clear-list">
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="product-group" value="hotel" checked>Гостиница
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="product-group" value="motel">Мотель
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="product-group" value="appartments">Апартаменты
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
 
-                <fieldset class="catalog-filter-group price">
-                  <legend class="catalog-filter-title">Стоимость, Р:</legend>
-                  <ul class="catalog-filter-list clear-list">
-                    <li class="catalog-filter-item catalog-filter-from">
-                      <label for="text" name="price-from"></label>
-                      <input class="product-price-range" type="text" name="product-price-from" placeholder="от">
-                    </li>
-                    <li class="catalog-filter-item catalog-filter-to">
-                      <label for="text" name="price-to"></label>
-                      <input class="product-price-range" type="text" name="product-price-to" placeholder="до">
-                    </li>
-                    <li class="catalog-filter-item catalog-filter-range">
-                      <label for="range"></label>
-                      <input type="range" name="product-price-range" min="0" max="100000">
-                    </li>
-                </fieldset>
+              <fieldset class="catalog-filter-group price">
+                <legend class="catalog-filter-title">Стоимость, Р:</legend>
+                <ul class="catalog-filter-list clear-list">
+                  <li class="catalog-filter-item catalog-filter-from">
+                    <label for="text" name="price-from"></label>
+                    <input class="product-price-range" type="text" name="product-price-from" placeholder="от">
+                  </li>
+                  <li class="catalog-filter-item catalog-filter-to">
+                    <label for="text" name="price-to"></label>
+                    <input class="product-price-range" type="text" name="product-price-to" placeholder="до">
+                  </li>
+                  <li class="catalog-filter-item catalog-filter-range">
+                    <label for="range"></label>
+                    <input type="range" name="product-price-range" min="0" max="100000">
+                  </li>
+              </fieldset>
 
-                <article class="catalog-filter-group buttons">
-                  <button class="catalog-filter-item button button-submit" type="submit" value="submit-parameter">Применить</button>
-                  <button class="catalog-filter-item button button-reset" type="reset" value="reset-parameters">Сбросить</button>
-                </article>
-              </form>
+              <article class="catalog-filter-group buttons">
+                <button class="catalog-filter-item button button-submit" type="submit" value="submit-parameter">Применить</button>
+                <button class="catalog-filter-item button button-reset" type="reset" value="reset-parameters">Сбросить</button>
+              </article>
+            </form>
           </article>
         </div>
       </section>
@@ -268,7 +267,7 @@
       </section>
     </main>
 
-    <!-- Footer -->
+  <!-- Footer -->
     <footer class="page-footer">
       <section class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>

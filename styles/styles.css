@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 1200px;
-    margin: 0px auto;
+    margin: 0 auto;
     min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
@@ -651,31 +651,29 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 1060px;
-    height: 49px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
     box-sizing: border-box;
 }
 
 /* Найдено всего  */
 .hotels-total {
     display: flex;
-    align-items: flex-start;
-    margin: 0 auto;
     justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
 }
 
 /* Дешевле - дороже */
 .hotels-sorting {
     display: flex;
-    justify-content: flex-start;
     flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     width: 252px;
     height: auto;
     padding: 14px 20px;
     margin-right: 70px;
-    margin-left: auto;
   /*  background-image: url("/images/elements/cheaper_array.svg"); не понятно пока как добавить*/
-    align-items: flex-start;
     background-repeat: no-repeat;
     background-size: 100%;
     font-family: inherit;
@@ -693,8 +691,7 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     width: 160px;
-    height: 48px;
-    margin-left: 70px;
+    height: auto;
 }
 .cards-view {
     display: flex;
