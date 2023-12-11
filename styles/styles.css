@@ -150,7 +150,7 @@ body {
   line-height: 10px;
 }
 
-.navigation-button {
+/*.navigation-button {
   display: block;
   min-width: 160px;
   height: auto;
@@ -170,7 +170,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
-}
+}*/
 
 /* обертка главной страницы */
 .main-container {
