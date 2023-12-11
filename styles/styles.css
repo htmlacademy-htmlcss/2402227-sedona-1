@@ -137,7 +137,7 @@ body {
     padding: 22px 12px;
 }
 
-/*.favourites-number {
+.favourites-number {
   min-width: 20px;
   min-height: 20px;
   background: #7DB54F;
@@ -148,7 +148,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 10px;
-}*/
+}
 
 .navigation-button {
   display: block;
