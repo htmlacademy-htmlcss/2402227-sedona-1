@@ -74,7 +74,7 @@ body {
   align-items: center;
   width: 1060px;
   height: 64px;
-  padding: 0px 70px;
+  padding: 0 70px;
   margin: 0;
 }
 .navigation-logo {
@@ -84,11 +84,13 @@ body {
 }
 .navigation-menu {
   display: flex;
+  flex-wrap: wrap;
   min-width: 339px;
   margin-right: auto;
 }
 .navigation-attributes {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   min-width: 268px;
 }
@@ -124,13 +126,19 @@ body {
 
 .search {
     background-image: url(/images/elements/icon-search.svg);
+    min-width: 20px;
+    min-height: 20px;
+    padding: 22px 12px;
 }
 .favorietes {
     background-image: url(/images/elements/icon-favoriets.svg);
+    min-width: 20px;
+    min-height: 20px;
+    padding: 22px 12px;
 }
 .favourites-number {
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   background: #7DB54F;
   border-radius: 10px;
   text-align: center;
@@ -139,6 +147,27 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 10px;
+}
+.navigation-button {
+  display: block;
+  min-width: 160px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  padding: 8px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: none;
+  background-color: #756157;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: PT Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 /* обертка главной страницы */
@@ -174,7 +203,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 69px 0px;
+    padding: 69px 0;
     width: 100%;
     height: auto;
 }
@@ -202,6 +231,8 @@ body {
 /*Стилизация смысловых заголовков H3 уровня*/
 
 .list-title {
+    display: block;
+    margin-top: 0;
     text-align: center;
     text-transform: uppercase;
     font-size: 24px;
@@ -212,6 +243,8 @@ body {
 /*Стилизация смысловых описаний H3 уровня*/
 
 .list-description-details {
+    display: block;
+    margin-bottom: 0;
     text-align: center;
     font-size: 18px;
     font-weight: 400;
@@ -245,7 +278,9 @@ body {
     width: 400px;
     height: 385px;
     padding: 103px 85px;
-    margin: 0;
+    gap: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
     color: #000;
     box-sizing: border-box;
     text-align: center;
@@ -341,7 +376,7 @@ body {
     align-self: stretch;
     color: #000;
     background: #F2F2F2;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0 0 4px;
     border: 0;
     width: 452px;
     min-height: 52px;
@@ -351,7 +386,7 @@ body {
     display: inline-block;
     color: #FFF;
     text-transform: uppercase;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0 4px 4px 0;
     border: 0;
     padding: 8px 50px;
     width: 232px;
@@ -405,21 +440,21 @@ button[type="submit"] {
   background-image: url(/images/social-icons/social-vk.svg);
   background-position: center;
   background-repeat: no-repeat;
-  padding: 0px 10px;
+  padding: 0 10px;
 }
 
 .telegram {
   background-image: url(/images/social-icons/social-tg.svg);
   background-position: center;
   background-repeat: no-repeat;
-  padding: 0px 10px;
+  padding: 0 10px;
 }
 
 .youtube {
   background-image: url(/images/social-icons/social-youtube.svg);
   background-position: center;
   background-repeat: no-repeat;
-  padding: 0px 10px;
+  padding: 0 10px;
 }
 
 /* Контакты */
@@ -744,7 +779,6 @@ button[type="submit"] {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  box-sizing: content-box;
   margin: 0;
   gap: 20px;
 }
