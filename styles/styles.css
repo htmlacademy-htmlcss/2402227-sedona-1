@@ -53,7 +53,6 @@ body {
 }
 
 .page-header {
-  display: grid;
   width: 1200px;
   background: #FFF;
   color: #333;
@@ -66,41 +65,30 @@ body {
 }
 
 /* Навигация по сайту - меню */
-
 .navigation {
   display: flex;
-  grid-template-columns: 140px 339px 268px;
-  justify-content: space-between;
   align-items: center;
-  width: 1060px;
-  height: 64px;
   padding: 0 70px;
   margin: 0;
 }
 .navigation-logo {
-  width: 140px;
   height: 70px;
   margin-right: 30px;
 }
 .navigation-menu {
   display: flex;
   flex-wrap: wrap;
-  min-width: 339px;
   margin-right: auto;
 }
 .navigation-attributes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  min-width: 268px;
 }
 .navigation-menu-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
   font-family: inherit;
   font-size: 20px;
   font-weight: 700;
@@ -150,15 +138,9 @@ body {
   line-height: 10px;
 }
 
-/*.navigation-button {
-  display: block;
-  min-width: 160px;
-  height: auto;
-  margin: 0;
-  padding: 0;
+.navigation-button {
   padding: 8px 50px;
-  justify-content: center;
-  align-items: center;
+  margin-left: 20px;
   border-radius: 4px;
   border: none;
   background-color: #756157;
@@ -170,7 +152,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
-}*/
+}
 
 /* обертка главной страницы */
 .main-container {
@@ -195,46 +177,45 @@ body {
     align-items: center;
 }
 
-/* Стилизация промежуточных блоков */
-
-.advantages-information,
-.invitation-details,
-.catalog-details,
-.main-newslatter,
-.catalog-newslatter {
+/* Стилизация промежуточных блоков на главной: информация и приглашение*/
+.advantages-information {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 69px 0;
-    width: 100%;
-    height: auto;
+    gap: 25px;
+}
+.invitation-details {
+    display: flex;
+    flex-direction: column;
+    padding: 64px 0;
+    gap: 20px;
 }
 
 /*Стилизация смысловых заголовков H2 уровня*/
-
 .main-logic-title {
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
+    margin: 0;
+    padding: 0;
 }
 
 /*Стилизация смысловых описаний H2 уровня*/
-
 .description-details {
     text-align: center;
     font-size: 22px;
     font-weight: 400;
     line-height: 26px;
     color: #000;
+    margin: 0;
+    padding: 0;
 }
 
 /*Стилизация смысловых заголовков H3 уровня*/
-
 .list-title {
-    display: block;
-    margin-top: 0;
+    margin: 0;
     text-align: center;
     text-transform: uppercase;
     font-size: 24px;
@@ -243,10 +224,8 @@ body {
 }
 
 /*Стилизация смысловых описаний H3 уровня*/
-
 .list-description-details {
-    display: block;
-    margin-bottom: 0;
+    margin: 0;
     text-align: center;
     font-size: 18px;
     font-weight: 400;
@@ -254,45 +233,27 @@ body {
 }
 
 /*Стилизация блоков Преимущества И Услуги*/
-
-.advantages,
-.servises-details {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: center;
-}
-
 .advantages-list,
 .servises-list {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    text-align: center;
 }
 
 .items-list-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     width: 400px;
     height: 385px;
-    padding: 103px 85px;
     gap: 30px;
-    margin-top: 0;
+    box-sizing: border-box;
     margin-bottom: 0;
-    color: #000;
-    box-sizing: border-box;
-    text-align: center;
 }
-
-.items-picture-wrapper {
-    display: block;
-    width: 800px;
-    min-height: 385px;
-    box-sizing: border-box;
+/*Внутренние отступы в преимуществах и сервисе*/
+.advantages-list-wrapper {
+  padding: 103px 85px;
+}
+.servises-list-wrapper {
+  padding: 80px 85px;
 }
 
 .advantages-item-devil,
@@ -300,12 +261,10 @@ body {
     background-color: #82B3D3;
     color: #FFF;
 }
-
 .advantages-item-squere,
 .advantages-item-tourists {
     background-color: rgba(131, 179, 211, 0.12);
 }
-
 .advantages-item-road {
     background-color: rgba(131, 179, 211, 0.20);
 }
@@ -316,14 +275,12 @@ body {
     background-repeat: no-repeat;
     background-image: url(/images/advantages-icons/icon-house.svg);
 }
-
 .servises-item-suvenirs {
     background-color: rgba(131, 179, 211, 0.12);
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(/images/advantages-icons/icon-suvenirs.svg);
 }
-
 .servises-item-food {
     background-color: none;
     background-position: center;
@@ -331,10 +288,15 @@ body {
     background-image: url(/images/advantages-icons/icon-food.svg);
 }
 
-/* Стилизация кнопки - переход в каталог */
-
+/* Стилизация раздела - переход в каталог */
+.catalog-details {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 304px;
+  gap: 20px;
+}
 .catalog-search {
-    display: block;
+    margin-top: 34px;
     padding: 8px 50px;
     align-self: center;
     font-family: PT Sans;
@@ -351,28 +313,30 @@ body {
 }
 
 /* Стилизация раздела - подписка по почте*/
-
+.main-newslatter,
+.catalog-newslatter {
+    display: flex;
+    flex-direction: column;
+    padding: 96px 258px 104px;
+    gap: 20px;
+}
 .main-newslatter {
     background-image: url("/images/pictures/subscribe.jpg");
     background-position: center;
     align-items: center;
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    width: 100%;
     color: #FFF;
 }
-
 .newsletter-description {
     color: #FFF;
 }
-
 .newsletter-form {
     display: flex;
     flex-direction: row;
     color: #FFF;
     text-align: center;
+    margin-top: 34px;
 }
-
 .newsletter-form #newsletter-email {
     display: flex;
     align-self: stretch;
@@ -383,7 +347,6 @@ body {
     width: 452px;
     min-height: 52px;
 }
-
 .newsletter-submit {
     display: inline-block;
     color: #FFF;
@@ -394,50 +357,35 @@ body {
     width: 232px;
     min-height: 52px;
 }
-
 button[type="submit"] {
   background-color: #82B3D3;
 }
 
 
 /* footer */
-
 .page-footer {
   display: grid;
   grid-template-columns: 142px 331px 115px;
-  flex-direction: row;
   justify-content: space-between;
-  width: 1060px;
-  min-height: 50px;
   padding: 40px 70px 30px 70px;
-  margin: 0;
 }
-
 .footer-social,
 .footer-contacts,
 .site-production {
-  display: grid;
-  flex-direction: column;
-  justify-content: center;
+  display: flex;
 }
 
-
 /* footer. Социальные сети */
-
 .footer-social-list {
   display: flex;
   width: 142px;
-  min-height: 40px;
-  flex-direction: row;
-  align-items: center;
+  gap: 10px;
 }
-
 .footer-social-item {
-  display: inline;
+  display: flex;
   align-items: center;
-  width: 27px;
+  min-width: 27px;
 }
-
 .vkontakte {
   background-image: url(/images/social-icons/social-vk.svg);
   background-position: center;
@@ -486,40 +434,19 @@ button[type="submit"] {
 }
 
 .footer-production-logo {
-  display: flex;
-  justify-content: flex-end;
-  align-items: right;
-  width: 115px;
-  min-height: 33px;
+  margin: 0;
 }
 
 /* Catalog*/
 .catalog-main-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.catalog-main-section {
-  display: flex;
-  flex-direction: column;
-  align-self: stretch;
-  align-items: flex-start;
   width: 1200px;
 }
-
 .catalog-filters-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 1200px;
   padding: 35px 70px 70px 70px;
-  min-height: 307px;
   box-sizing: border-box;
 }
-
 .background-sadona-catalog {
     display: block;
     margin: 0 auto;
@@ -531,7 +458,6 @@ button[type="submit"] {
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
-
 .catalog-main-header {
     font-family: PT Sans;
     font-size: 60px;
@@ -540,48 +466,36 @@ button[type="submit"] {
     line-height: 78px;
     color: #FFF;
 }
-
 .catalog-header {
-  margin-bottom: 8px;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
+/* Хлебные крошки */
 .breadcrumbs {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 114px;
-    min-height: 21px;
+    align-items: center;
     color: #FFF;
+    gap: 10px;
 }
 .breadcrumbs-item {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;
     color: inherit;
 }
 .breadcrumbs-home-link {
     background-image: url("/images/breadcrumbs/icon-home.svg");
-    align-items: center;
     background-repeat: no-repeat;
     background-size: 100%;
     width: 13px;
     min-height: 12px;
-    padding-bottom: 2px;
-    margin-right: 8px;
     color: inherit;
 }
 .breadcrumbs-separation {
     background-image: url("/images/breadcrumbs/icon-arrow.svg");
-    align-items: center;
     background-repeat: no-repeat;
-    background-size: 100%;
-    width: 8px;
     padding: 5px 7px;
-    margin-right: 8px;
 }
 .breadcrumbs-self-link {
-    width: 73px;
-    min-height: 21px;
     color: inherit;
     font-family: PT Sans;
     font-size: 16px;
@@ -592,12 +506,13 @@ button[type="submit"] {
 }
 
 /* Раздел - фильтры */
-.catalog-hotels-filters {
+/*.catalog-hotels-filters {
   display: grid;
   flex-direction: row;
   justify-content: space-between;
   min-height: 160px;
-}
+}*/
+
 .catalog-filter {
   display: flex;
   flex-direction: row;
@@ -892,25 +807,20 @@ button[type="submit"] {
 /* Пагинация */
 .pagination-list {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 60px;
-  float: left;
+  margin: 0;
+  padding: 0;
 }
-.pagination-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 11px 19px 13px;
+.pagination-item:not(:last-child) {
   margin-right: 8px;
-  width: 60px;
-  min-height: 60px;
-  border-radius: 4px;
-  background-color: #82B3D3;
 }
 .pagination-link {
+    display: block;
+    box-sizing: border-box;
+    width: 60px;
+    min-height: 60px;
+    padding: 11px 19px 13px;
+    border-radius: 4px;
+    background-color: #82B3D3;
     font-family: PT Sans;
     font-size: 20px;
     font-style: normal;
@@ -921,11 +831,19 @@ button[type="submit"] {
     text-align: center;
     color:#FFF
 }
-.current {
-    background-color: #F2F2F2;
-}
 .pagination-current {
     color: #000;
+    background-color: #F2F2F2;
+}
+.pagination-next {
+  color: #000000;
+  background-color: none;
+  padding: 16px 0 18px 0;
+  font-family: PT Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
 }
 
 
