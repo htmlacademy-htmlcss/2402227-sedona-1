@@ -52,12 +52,6 @@ body {
   min-height: 100%;
 }
 
-.page-header {
-  width: 1200px;
-  background: #FFF;
-  color: #333;
-}
-
 .clear-list {
   list-style-type: none;
   margin: 0;
@@ -164,7 +158,6 @@ body {
 .main-page-welcome {
     display: flex;
     justify-content: center;
-    width: 1200px;
     height: 485px;
     background-image: url(/images/pictures/sedona-main.jpg);
     background-repeat: no-repeat;
@@ -413,7 +406,6 @@ button[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 331px;
   min-height: 50px;
   box-sizing: border-box;
 }
