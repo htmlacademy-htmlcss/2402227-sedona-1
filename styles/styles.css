@@ -632,6 +632,16 @@ margin-bottom: 40px;
   background-size: 16px 14px;
   cursor: pointer;
 }
+.cards-view:hover {
+  border-color: #000;
+}
+.cards-view:focus {
+  border-color:#68A2CA
+}
+.cards-view:active {
+  border-color: #000;
+}
+
 .cards-table {
   background-image: url("../images/elements/cards-table.svg");
 }
