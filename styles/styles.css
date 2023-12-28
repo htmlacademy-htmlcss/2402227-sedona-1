@@ -48,11 +48,74 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
-
 .clear-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+/* Стилиация Заголовков и Текстов по сайту */
+
+/*Стилизация Заголовков H1 уровня */
+.catalog-main-header {
+  font-family: PT Sans;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px;
+  color: #FFF;
+}
+/*Стилизация Заголовков H2 уровня*/
+.main-logic-title {
+  font-family: PT Sans;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+}
+/*Стилизация Заголовков H3 уровня*/
+.list-title {
+  font-family: PT Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+}
+/*Стилизация Заголовков H4 уровня*/
+.catalog-filter-title {
+  font-family: PT Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #FFF;
+}
+
+/*Стилизация описаний H2 уровня*/
+.description-details {
+  font-family: PT Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #333;
+  text-align: center;
+}
+/*Стилизация описаний H3 уровня*/
+.list-description-details {
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000;
+  text-align: center;
 }
 
 /* Навигация по сайту - меню */
@@ -87,7 +150,7 @@ body {
   text-align: center;
   text-decoration: none;
 }
-.navigation-link {
+.navigation-link-main {
   display: block;
   padding: 20px 16px;
   font-family: PT Sans;
@@ -99,21 +162,30 @@ body {
 .navigation-link-current {
   text-decoration: underline;
 }
+.navigation-link-attributes {
+  display: block;
+  padding: 22px 12px;
+  font-family: PT Sans;
+  color: inherit;
+  background-color: #FFF;
+  text-align: center;
+  text-decoration: none;
+}
 
 /* Иконки к меню */
 .navigation-icon {
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
   min-width: 18px;
   min-height: 18px;
-  padding: 22px 12px;
-  fill: #000000;
+  margin: 0;
   cursor: pointer;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
+}
+.navigation-search {
+  background-image: url("../images/elements/icon-search.svg");
+}
+.navigation-favourites {
+  background-image: url("../images/elements/icon-favoriets.svg");
 }
 .favourites-number {
   min-width: 20px;
@@ -179,47 +251,6 @@ body {
     gap: 20px;
 }
 
-/*Стилизация смысловых заголовков H2 уровня*/
-.main-logic-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36px;
-    margin: 0;
-    padding: 0;
-}
-
-/*Стилизация смысловых описаний H2 уровня*/
-.description-details {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 26px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-}
-
-/*Стилизация смысловых заголовков H3 уровня*/
-.list-title {
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-}
-
-/*Стилизация смысловых описаний H3 уровня*/
-.list-description-details {
-    margin: 0;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-}
-
 /*Стилизация блоков Преимущества И Услуги*/
 .advantages-list,
 .servises-list {
@@ -228,10 +259,10 @@ body {
 .items-list-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width: 400px;
     height: 385px;
-    gap: 30px;
+    gap: 60px;
     box-sizing: border-box;
     margin-bottom: 0;
 }
@@ -372,32 +403,19 @@ button[type="submit"] {
 /* footer. Соц. Сети */
 .footer-social {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 142px;
+  min-height: 40px;
+  gap: 10px;
+  margin: 0;
 }
 .footer-social-list {
   display: flex;
-  justify-content: space-evenly;
-  min-width: 142px;
-  gap: 10px;
 }
-.footer-social-item {
-  display: flex;
-}
-.footer-social-link {
-  display: block;
-  min-height: 40px;
-  background-position: center;
-  background-repeat: no-repeat;
+.footer-social-link svg {
   padding: 0 10px;
   cursor: pointer;
-}
-.vkontakte {
-  background-image: url(../images/social-icons/social-vk.svg);
-}
-.telegram {
-  background-image: url(../images/social-icons/social-tg.svg);
-}
-.youtube {
-  background-image: url(../images/social-icons/social-youtube.svg);
 }
 
 /* Контакты */
@@ -408,15 +426,7 @@ button[type="submit"] {
   min-height: 50px;
   box-sizing: border-box;
 }
-.footer-contacts-address {
-  font-family: PT Sans;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px;
-  text-align: center;
-  text-transform: uppercase;
-}
+
 /* .footer-contacts-address a {
   color: #000;
   text-decoration-line: none;
@@ -425,6 +435,12 @@ button[type="submit"] {
 .footer-contacts-address a[href^="tel:"] {
   color: #000;
   text-decoration-line: none;
+  font-family: PT Sans;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
 }
 
 /* Произвдитель сайта */
@@ -444,14 +460,7 @@ button[type="submit"] {
   background-color: #FFF;
   color: #000;
 }
-.catalog-main-header {
-  font-family: PT Sans;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 78px;
-  color: #FFF;
-}
+
 .catalog-header {
 margin: 0;
 margin-bottom: 40px;
@@ -515,7 +524,7 @@ margin-bottom: 40px;
 .price {
   margin-right: 70px;
 }
-/* Фильтры каталога */
+/* Фильтры каталога - убираю отсюда и хочу в стилизацию заголовков перенести
 .catalog-filter-title {
   font-family: PT Sans;
   font-size: 20px;
@@ -524,7 +533,8 @@ margin-bottom: 40px;
   line-height: 24px;
   min-height: 24px;
   color: #FFF;
-}
+}*/
+
 .catalog-filter-list {
   display: grid;
   grid-template-rows: repeat(3, auto);
@@ -535,11 +545,6 @@ margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: inherit;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400px;
-  line-height: 23px;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -582,16 +587,11 @@ margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   min-width: 522px;
+
 }
 .hotels-sorting {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
-  box-sizing: border-box;
-  padding: 14px 20px;
-  margin-left: auto;
-  margin-right: 70px;
 }
 .select-control {
   font-family: inherit;
@@ -601,20 +601,18 @@ margin-bottom: 40px;
   line-height: 21px;
   border-radius: 4px;
   border: 2px solid #E5E5E5;
+  padding: 14px 20px;
 }
 .select-icon {
   background-image: url("../images/elements/cheaper-array.svg");
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: 100%;
+  cursor: pointer;
 }
 
 /* Тип отображения карточек на странице */
 .cards-view-container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  box-sizing: border-box;
   gap: 8px;
 }
 .cards-view-list {
@@ -623,29 +621,26 @@ margin-bottom: 40px;
   margin: 0;
 }
 .cards-view {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-width: 48px;
   min-height: 48px;
   padding: 14px 12px;
-  background-size: 100%;
   box-sizing: border-box;
   border-radius: 4px;
   outline: 2px solid #E5E5E5;
-  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 14px;
+  cursor: pointer;
 }
-.cards-view-icon {
-  display: inline-block;
-  fill: #000000;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
+.cards-table {
+  background-image: url("../images/elements/cards-table.svg");
 }
-
+.cards-slideshow {
+  background-image: url("../images/elements/cards-slideshow.svg");
+}
+.cards-list {
+  background-image: url("../images/elements/cards-list.svg");
+}
 
 /* Каталог и карточки отелей */
 .hotel-list {
@@ -672,12 +667,7 @@ margin-bottom: 40px;
 .hotel-card-title {
   grid-column: 1 / -1;
   margin: 0;
-  font-family: PT Sans;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px;
-  color: #000;
+  text-transform: none;
 }
 .hotel-type {
   margin: 0;
