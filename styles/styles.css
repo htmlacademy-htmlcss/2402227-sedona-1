@@ -633,13 +633,13 @@ margin-bottom: 40px;
   cursor: pointer;
 }
 .cards-view:hover {
-  border-color: #000;
+  outline-color: #000;
 }
 .cards-view:focus {
-  border-color:#68A2CA
+  outline-color:#68A2CA
 }
 .cards-view:active {
-  border-color: #000;
+  outline-color: #000;
 }
 
 .cards-table {
