@@ -1080,13 +1080,17 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  position: relative;
 }
-.hotel-stars {
-  grid-column-start: 1;
-  align-items: center;
+.hotel-card-rating::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/elements/icon-star.svg");
+  min-width: 18px;
+  min-height: 17px;
   gap: 6px;
-  background-repeat: no-repeat;
-  margin: 0;
+  bottom: 20px;
+  right: 280px;
 }
 
 /* Пагинация */
