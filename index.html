@@ -221,12 +221,12 @@
                   <span class="appointment-form__label">
                     <label class="appointment-form__itemTitle">Дети:</label>
                     <span class="tooltip">
-                      <button class="tooltip-toggle" type="button">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
                         <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4h2v2H9V4Zm2 12H9V7h2v9Z" fill="#fff"/>
                         </svg>
                       </button>
-                      <span class="tooltip-text">Укажите количество детей,<br> которые будут с вами, возраст<br> которых от 6 до 18 лет. Дети <br>до 6 лет размещаются <br>бесплатно.</span>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей,<br> которые будут с вами, возраст<br> которых от 6 до 18 лет. Дети <br>до 6 лет размещаются <br>бесплатно.</span>
                     </span>
                   </span>
                   <input class="appointment-form__field appointment-field__number" type="number" id="appointment-number" min="0" max="6">

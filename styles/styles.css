@@ -1223,9 +1223,9 @@ body {
   display: flex;
   margin: auto;
 }
-.modal-container__hidden {
+/* .modal-container__hidden {
       display: none;
-}
+}*/
 
 /*.catalog-search-button:hover + .modal-container,
 .catalog-search-button:focus + .modal-container {
@@ -1530,8 +1530,13 @@ input[type=number]::-webkit-outer-spin-button {
   background-image: url(../images/elements/triangle.svg);
   position: absolute;
   content: "";
-  top: 0;
-  left: 0;
+  bottom: 100%;
+  left: 100px;
+  right: 0;
+  width: 19px;
+  height: 9px;
+  margin-left: 0;
+  margin-right: 0;
 }
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
