@@ -54,8 +54,6 @@ body {
   padding: 0;
 }
 
-/* Общая Стилизация кнопок */
-
 /* Стилиация Заголовков и Текстов по сайту */
 
 /*Стилизация Заголовков H1 уровня */
@@ -138,10 +136,15 @@ body {
   align-items: center;
   padding: 0 70px;
 }
+
+/* Логотип */
 .navigation-logo {
-  height: 70px;
+  width: 140px;
+  height: 67px;
   margin-right: 30px;
+  z-index: 1;
 }
+
 .navigation-menu-list {
   display: flex;
   flex-wrap: wrap;
@@ -179,8 +182,8 @@ body {
   background-color: #756257;
   width: 100%;
   height: 2px;
-  bottom: -5px;
-  left: 0px;
+  bottom: -2px;
+  left: 0;
 }
 
 .navigation-link-attributes {
@@ -279,6 +282,7 @@ body {
     background-image: url(../images/pictures/sedona-main.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #756157;
     padding: 51px 371px 51px 371px;
     position: relative;
 }
@@ -332,10 +336,10 @@ body {
 }
 
 /* Разделительный элемент */
-.advantages-list-wrapper {
+.advantages-title {
   position: relative;
 }
-.advantages-list-wrapper::after {
+.advantages-title::after {
   content: "";
   position: absolute;
   background-position: center;
@@ -344,8 +348,8 @@ body {
   height: 2px;
   background-color: rgba(0, 0, 0, 0.30);
   margin: auto;
-  top: 200px;
-  left: 170px;
+  top: 80px;
+  left: 27px;
 }
 .items-picture-wrapper {
   display: flex;
@@ -368,7 +372,7 @@ body {
     background-color: #82B3D3;
     color: #FFF;
 }
-.advantages-item-devil::after {
+.advantages-item-devil .advantages-title::after {
   content: "";
   position: absolute;
   background-position: center;
@@ -377,10 +381,10 @@ body {
   height: 2px;
   background-color: rgba(255, 255, 255, 0.30);
   margin: auto;
-  top: 190px;
-  left: 170px;
+  top: 85px;
+  left: 50px;
 }
-.advantages-item-city::after {
+.advantages-item-city .advantages-title::after {
   content: "";
   position: absolute;
   background-position: center;
@@ -389,8 +393,8 @@ body {
   height: 2px;
   background-color: rgba(255, 255, 255, 0.30);
   margin: auto;
-  top: 190px;
-  left: 170px;
+  top: 85px;
+  left: 35px;
 }
 .advantages-item-city * {
   color: #FFF;
@@ -431,19 +435,13 @@ body {
   margin: auto;
 }
 .servises-item-house::before {
-    content: "";
     background-image: url(../images/advantages-icons/icon-house.svg);
-    position: absolute;
 }
 .servises-item-suvenirs::before {
-  content: "";
   background-image: url(../images/advantages-icons/icon-suvenirs.svg);
-  position: absolute;
 }
 .servises-item-food::before {
-    content: "";
     background-image: url(../images/advantages-icons/icon-food.svg);
-    position: absolute;
 }
 
 /*Вводная инфа о сервисе с кнопкой перехода*/
@@ -509,6 +507,9 @@ body {
 }
 .main-newslatter {
     background-image: url("../images/pictures/subscribe.jpg");
+    background-color: #756157;
+    background-position: center;
+    background-size: cover;
 }
 .newsletter-description {
     color: #FFF;
@@ -539,26 +540,6 @@ body {
 }
 
 /* Стилизация кнопки Подписка */
-/* вариант 1 */
-/* button[type="submit"] {
-  display: inline-block;
-  width: 232px;
-  min-height: 52px;
-  padding: 8px 50px;
-  box-sizing: border-box;
-  border-radius: 0 4px 4px 0;
-  border: none;
-  background-color: #82B3D3;
-  color: #FFF;
-  font-family: PT Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase;
-  cursor: pointer;
-}*/
-/* вариант 2 */
 .newsletter-submit-button {
   width: 232px;
   min-height: 52px;
@@ -648,11 +629,6 @@ body {
   box-sizing: border-box;
 }
 
-/* .footer-contacts-address a {
-  color: #000;
-  text-decoration-line: none;
-} */
-
 .footer-contacts-address a[href^="tel:"] {
   color: #000000;
   text-decoration-line: none;
@@ -699,21 +675,30 @@ body {
 
 /* Catalog*/
 
-/* Контейнер для фильтров и ххлебных крошек */
-.catalog-filters-container {
+/* Контейнер для фильтров и хлебных крошек */
+.catalog-page-filters__wrap {
+  display: flex;
   padding: 35px 70px 70px 70px;
-}
-.background-sedona-catalog {
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
   background-image: url("../images/pictures/background-sedona-catalog.jpg");
-  background-color: #FFF;
-  color: #000;
+  background-color: #756157;
+  color: #000000;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.catalog-header {
+.catalog-page-filters__title {
+  width: 494px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+  font-family: PT Sans;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: center;
 }
 
 /* Хлебные крошки */
@@ -721,23 +706,20 @@ body {
   display: flex;
   align-items: center;
 }
-.breadcrumbs-item {
-    display: flex;
-}
-.breadcrumbs-home-link {
+.breadcrumbs-list__item {
   display: flex;
+}
+.breadcrumbs-list__link_home {
   padding-bottom: 2px;
-  justify-content: center;
-  align-items: center;
   background-image: url("../images/breadcrumbs/icon-home.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 13px;
   min-height: 12px;
-  color: inherit;
   position: relative;
+  left: 4px;
 }
-.breadcrumbs-home-link::after {
+.breadcrumbs-list__link_home::after {
   content: "";
   background-image: url("../images/breadcrumbs/icon-arrow.svg");
   background-repeat: no-repeat;
@@ -747,9 +729,9 @@ body {
   top: 2px;
   left: 0;
 }
-.breadcrumbs-self-link {
-    margin-left: 30px;
-    color: inherit;
+.breadcrumbs-list__link_self {
+    margin-left: 33px;
+    color: #FFFFFF;
     font-family: PT Sans;
     font-size: 16px;
     font-style: normal;
@@ -758,61 +740,99 @@ body {
     line-height: 21px;
 }
 
-/* Раздел - фильтры */
-.catalog-filter {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
+/* Фильтры каталога */
+
+.filters {
+  display: flex;
+  width: 100%;
   margin: 0;
-  min-height: 160px;
+  margin-top: 40px;
+}
+.filters__wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.filters-title {
+  font-family: PT Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #FFFFFF
 }
 /* Блоки фильтров */
-.catalog-filter-group {
+.filters-group {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  border: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
-/* Отступы между элементами - фильтры */
-.infrastructure {
-  margin-right: 70px;
-}
-.house-type {
-  margin-right: auto;
-}
-.price {
-  margin-right: 70px;
-}
-
-.catalog-filter-list {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  align-items: flex-start;
+.filters-list {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 32px;
   gap: 16px;
-}
-.catalog-filter-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: auto;
-  height: auto;
-  margin: 0 auto;
   color: #FFF;
 }
-.product-price-range {
-  text-align: left;
-}
-.product-price-range, .input ::-webkit-input-placeholder {
-  text-align: right;
-}
-/* Стилизация кнопок в фильтрах */
-.catalog-filter-group {
+.filters-list__item {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  padding: 0;
+}
+.filters-group__infrastructure .filters-list__input {
+  margin-right: 16px;
+}
+.filters-group__housetype .filters-list__input {
+  margin-right: 16px;
+}
+
+/* Отступы между элементами - фильтры */
+.filters-group__infrastructure {
+  min-width: 150px;
+  margin-right: 70px;
+}
+.filters-group__housetype {
+  min-width: 150px;
+}
+.filters-group__price {
+  margin-left: auto;
+}
+.filters-list__price {
+  display: grid;
+  grid-template-columns: repeat(2, 143px);
+}
+.price-range {
+  background-color: #F2F2F2;
+  width: 143px;
+  min-height: 48px;
+  border: none;
+}
+.price-range__from {
+  border-radius: 4px 0 0 4px;
+}
+.price-range__to {
+  border-radius: 0 4px 4px 0;
+  border-right-style: solid #000;
+}
+.filters-list__range {
+  grid-column: 1 /-1;
+  width: 288px;
+}
+.filters-group__battons {
+  min-width: 191px;
+  margin-left: 70px;
   gap: 32px;
 }
-.button-submit,
-.button-reset {
+
+/* Стилизация кнопок в фильтрах */
+
+.filters-group-button__submit,
+.filters-group-button__reset {
   width: 191px;
   min-height: 36px;
   padding: 8px 50px;
@@ -830,46 +850,45 @@ body {
 }
 
 /* Кнопка - Применить */
-.button-submit {
+.filters-group-button__submit {
   background-color: #82B3D3;
 }
-.button-submit:hover {
+.filters-group-button__submit:hover {
   background-color: #68A2CA;
   color: #FFFFFF;
 }
-.button-submit:focus {
+.filters-group-button__submit:focus {
   background-color: #68A2CA;
   color: #FFFFFF;
   outline: none;
 }
-.button-submit:active {
+.filters-group-button__submit:active {
   background-color: #82B3D3;
   color: #FFFFFF4D;
 }
-.button-submit:disabled {
+.filters-group-button__submit:disabled {
   background-color: #E5E5E5;
   color: #FFFFFF;
 }
 
 /* Кнопка - Сбросить */
-.button-reset {
+.filters-group-button__reset {
   background-color: transparent;
 }
-.button-reset:hover {
+.filters-group-button__reset:hover {
   color: #FFFFFF4D;
 }
-.button-reset:focus {
+.filters-group-button__reset:focus {
   border: 3px solid #83B3D3;
   color: #FFFFFF;
   outline: none;
 }
-.button-reset:active {
+.filters-group-button__reset:active {
   color: #FFFFFF4D;
 }
-.button-reset:disabled {
+.filters-group-button__reset:disabled {
   color: #FFFFFF4D;
 }
-
 
 /* Общий контейнер для сортировки и типа отображения*/
 .hotels-sections-container {
@@ -919,6 +938,7 @@ body {
   background-repeat: no-repeat;
   background-position: 94% 50%;
   cursor: pointer;
+  appearance: none;
 }
 .select-control:hover {
   border-color: #68A2CA;
@@ -933,7 +953,6 @@ body {
 .select-control:disabled {
   opacity: 30%;
 }
-
 
 /* Тип отображения карточек на странице */
 .cards-view-list {
@@ -986,6 +1005,8 @@ body {
 .hotel-card-item {
   display: grid;
   grid-template-columns: repeat(2, 140px);
+  justify-self: center;
+  align-self: center;
   gap: 16px 20px;
   padding: 20px;
   border-radius: 4px;
@@ -1119,14 +1140,23 @@ body {
   line-height: 20px;
   position: relative;
 }
-.hotel-card-rating::before {
-  content: "";
-  position: absolute;
-  min-width: 18px;
-  min-height: 17px;
+/* Стилизация звезд */
+.stars {
+  background-image: url(../images/elements/icon-star.svg);
+  background-repeat: space;
+  height: 17px;
   gap: 6px;
-  bottom: 20px;
-  right: 280px;
+  align-self: center;
+  justify-self: start;
+}
+.stars__2 {
+  width: 40px;
+}
+.stars__3 {
+  width: 65px;
+}
+.stars__4 {
+  width: 85px;
 }
 
 /* Пагинация */
@@ -1167,7 +1197,6 @@ body {
   color:#FFFFFF;
   opacity: 30%;
 }
-
 .pagination-current {
     color: #000;
     background-color: #F2F2F2;
@@ -1181,4 +1210,330 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+}
+
+/* Модальное окно */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0.80);
+  display: flex;
+  margin: auto;
+}
+.modal-container__hidden {
+      display: none;
+}
+
+/*.catalog-search-button:hover + .modal-container,
+.catalog-search-button:focus + .modal-container {
+  display: block;
+}*/
+
+.modal-container__content {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #FFFFFF;
+  align-self: center;
+  justify-self: center;
+}
+.modal-container__wrap {
+  min-width: 717px;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+.modal-container__appointment {
+  width: 577px;
+}
+.appointment-form_group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.appointment-form__list {
+  justify-content: space-between;
+}
+.appointment-form__checkin,
+.appointment-form__checkout {
+  grid-column: 1 / -1;
+}
+.appointment-form__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.appointment-form__item p {
+  padding: 0 20px;
+  margin: 0;
+  margin-top: 4px;
+}
+.appointment-form__description {
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000;
+  text-align: center;
+}
+.appointment-form__exception {
+  color: #FF5757;
+}
+.appointment-form__field {
+  display: flex;
+  align-items: center;
+  min-width: 440px;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  background-color: #F2F2F2;
+  margin-left: auto;
+  color: #000;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.appointment-form__itemTitle {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 120% */
+  text-transform: capitalize;
+  align-self: center;
+  justify-self: center;
+}
+.appointment-form__icon {
+  position: relative;
+}
+.appointment-form__icon::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 535px;
+  background-image: url(../images/elements/calendar.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+}
+.appointment-form__number {
+  display: flex;
+  width: 100%;
+}
+.appointment-field__number {
+  min-width: 110px;
+  margin-left: 46px;
+}
+.appointment-icon__adult {
+  position: relative;
+}
+.appointment-icon__adult::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 205px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/elements/button-plus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.appointment-icon__adult::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 143px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/elements/button-minus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.appointment-icon__children {
+  position: relative;
+}
+.appointment-icon__children::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 165px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/elements/button-plus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.appointment-icon__children::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/elements/button-minus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.modal-container__close {
+  width: 52px;
+  height: 52px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.modal-container__button {
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.modal-container__button:hover {
+  background-color: #E6E6E6;
+}
+.modal-container__button:focus {
+  background-color: #E6E6E6;
+  border: solid #83B3D3;
+}
+.modal-container__button:active {
+  background-color: #E6E6E6;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.modal-container__title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-family: PT Sans;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  background-color: #FFFFFF;
+  color: #000;
+  text-decoration: none;
+}
+.appointment-form__button {
+  display: flex;
+  width: 577px;
+  min-height: 60px;
+  margin: 0;
+  padding: 0 77px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #83B3D3;
+  border: none;
+}
+.appointment-form__button:hover {
+  background-color: #68A2CA;
+  color: #FFFFFF;
+}
+.appointment-form__button:focus {
+  background-color: #68A2CA;
+  color: #FFFFFF;
+  outline: none;
+}
+.appointment-form__button:active {
+  background-color: #82B3D3;
+  color: #FFFFFF4D;
+}
+.appointment-form__button:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
+}
+.appointment-form__buttonTitle {
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  font-family: PT Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+/* Стилизация ултипа */
+.appointment-form__label {
+  display: flex;
+}
+.tooltip {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 13px;
+  left: 55px;
+}
+.tooltip-toggle {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.tooltip-icon {
+  border-radius: 50%;
+  background-color: #83B3D3;
+}
+.tooltip-text {
+  background-color: #333;
+  text-align: left;
+  color: #FFF;
+  min-width: 256px;
+  padding: 15px 18px 18px 22px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+  font-family: PT Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: -100px;
+  z-index: 1;
+  display: none;
+}
+.tooltip-text::before {
+  background-image: url(../images/elements/triangle.svg);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+}
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
