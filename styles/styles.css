@@ -163,7 +163,7 @@ body {
 .navigation-link-main {
   display: block;
   padding: 20px 0;
-  margin: 0 16px;
+  margin: 0 18px;
   font-family: PT Sans;
   font-weight: 700;
   color: #000;
@@ -171,6 +171,7 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
+  letter-spacing: 0.4px;
 }
 .navigation-link-current {
   text-decoration: none;
@@ -278,24 +279,26 @@ body {
 /*Векторный текст - приветствие*/
 .main-page-welcome {
     display: flex;
+    min-height: 485px;
     justify-content: center;
     background-image: url(../images/pictures/sedona-main.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #756157;
+    background-color: #b1867d;
     padding: 51px 371px 51px 371px;
     position: relative;
 }
 .main-page-welcome::after {
+  display: inline-block;
+  position: absolute;
   content: "";
-  width: 1200px;
+  width: 1203px;
   height: 57px;
+  bottom: -2px;
   background-image: url(../images/elements/main-picture-decor-bottom.svg);
   background-repeat: no-repeat;
   background-size: 100%;
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
+  z-index: 1;
 }
 
 .welcome-picture {
@@ -342,14 +345,13 @@ body {
 .advantages-title::after {
   content: "";
   position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 60px;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.30);
   margin: auto;
-  top: 80px;
-  left: 27px;
+  bottom: -30px;
+  left: 0;
+  right: 0;
 }
 .items-picture-wrapper {
   display: flex;
@@ -373,29 +375,12 @@ body {
     color: #FFF;
 }
 .advantages-item-devil .advantages-title::after {
-  content: "";
-  position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 60px;
-  height: 2px;
   background-color: rgba(255, 255, 255, 0.30);
-  margin: auto;
-  top: 85px;
-  left: 50px;
 }
 .advantages-item-city .advantages-title::after {
-  content: "";
-  position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 60px;
-  height: 2px;
   background-color: rgba(255, 255, 255, 0.30);
-  margin: auto;
-  top: 85px;
-  left: 35px;
 }
+
 .advantages-item-city * {
   color: #FFF;
 }
@@ -677,14 +662,9 @@ body {
 
 /* Контейнер для фильтров и хлебных крошек */
 .catalog-page-filters__wrap {
-  display: flex;
   padding: 35px 70px 70px 70px;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
   background-image: url("../images/pictures/background-sedona-catalog.jpg");
   background-color: #756157;
-  color: #000000;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -698,7 +678,6 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 78px;
-  text-align: center;
 }
 
 /* Хлебные крошки */
@@ -743,17 +722,37 @@ body {
 /* Фильтры каталога */
 
 .filters {
-  display: flex;
-  width: 100%;
-  margin: 0;
   margin-top: 40px;
 }
+
 .filters__wrap {
   display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
 }
+
+/* Блоки фильтров */
+.filters-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filters-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 16px;
+  color: #FFF;
+}
+
+.filters-group__infrastructure .filters-list__input {
+  margin-right: 16px;
+}
+.filters-group__housetype .filters-list__input {
+  margin-right: 16px;
+}
+
 .filters-title {
   font-family: PT Sans;
   font-size: 20px;
@@ -763,69 +762,73 @@ body {
   text-transform: capitalize;
   color: #FFFFFF
 }
-/* Блоки фильтров */
-.filters-group {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-.filters-list {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-top: 32px;
-  gap: 16px;
-  color: #FFF;
-}
-.filters-list__item {
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-.filters-group__infrastructure .filters-list__input {
-  margin-right: 16px;
-}
-.filters-group__housetype .filters-list__input {
-  margin-right: 16px;
-}
 
 /* Отступы между элементами - фильтры */
 .filters-group__infrastructure {
-  min-width: 150px;
   margin-right: 70px;
 }
-.filters-group__housetype {
-  min-width: 150px;
-}
+
+/* Range от до */
 .filters-group__price {
   margin-left: auto;
 }
-.filters-list__price {
-  display: grid;
-  grid-template-columns: repeat(2, 143px);
+
+.range {
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 36px;
 }
-.price-range {
-  background-color: #F2F2F2;
+
+.range input {
   width: 143px;
-  min-height: 48px;
-  border: none;
+  height: 48px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  background-color: #F2F2F2;
+  outline: none;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
 }
-.price-range__from {
+
+.range-from {
+  margin-right: 2px;
   border-radius: 4px 0 0 4px;
+
 }
-.price-range__to {
+
+.range-to {
+  margin-left: 2px;
   border-radius: 0 4px 4px 0;
-  border-right-style: solid #000;
 }
-.filters-list__range {
-  grid-column: 1 /-1;
-  width: 288px;
+
+.range label {
+  position: relative;
 }
+.range span {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 20px;
+  min-width: 20px;
+  min-height: 24px;
+  transform: translateY(-50%);
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.3;
+}
+
 .filters-group__battons {
   min-width: 191px;
   margin-left: 70px;
+  margin-top: 55px;
   gap: 32px;
 }
 
@@ -895,8 +898,6 @@ body {
   display: grid;
   gap: 40px;
   padding: 50px 70px 60px 70px;
-  background-color: #FFF;
-  font-family: PT Sans;
 }
 
 /* Общий блок */
@@ -907,10 +908,12 @@ body {
   margin: 0;
   height: 48px ;
 }
+
 /* Найдено всего  */
 .hotels-total {
   display: block;
 }
+
 /* Сортировка от большего к меньшему */
 .sorting-view-container {
   display: flex;
@@ -918,6 +921,7 @@ body {
   min-width: 522px;
   height: 48px;
 }
+
 .select-control {
   display: flex;
   align-items: center;
@@ -933,6 +937,7 @@ body {
   font-weight: 400;
   line-height: 21px;
 }
+
 .select-icon {
   background-image: url("../images/elements/cheaper-array.svg");
   background-repeat: no-repeat;
@@ -940,6 +945,7 @@ body {
   cursor: pointer;
   appearance: none;
 }
+
 .select-control:hover {
   border-color: #68A2CA;
 }
@@ -958,10 +964,9 @@ body {
 .cards-view-list {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  margin: 0;
-  padding: 0;
   gap: 8px;
 }
+
 .cards-view {
   display: inline-block;
   min-width: 48px;
@@ -970,11 +975,13 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   border: 2px solid #E5E5E5;
+  background-color: #ffffff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 16px 14px;
   cursor: pointer;
 }
+
 .cards-view:hover {
   border-color: #000;
 }
@@ -1002,36 +1009,38 @@ body {
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
 }
+
 .hotel-card-item {
   display: grid;
   grid-template-columns: repeat(2, 140px);
   justify-self: center;
-  align-self: center;
   gap: 16px 20px;
   padding: 20px;
   border-radius: 4px;
   border: 1px solid #E6E6E6;
 }
+
 .hotel-card-link {
   grid-column: 1 / -1;
   text-decoration: none;
   color: #000;
 }
+
 .hotel-card-image {
   display: flex;
 }
+
 .hotel-card-title {
   grid-column: 1 / -1;
-  margin: 0;
   text-transform: none;
   text-align: start;
 }
+
 .hotel-type {
-  margin: 0;
   text-align: start;
 }
+
 .price-per-night {
-  margin: 0;
   text-align: end;
 }
 
@@ -1140,6 +1149,7 @@ body {
   line-height: 20px;
   position: relative;
 }
+
 /* Стилизация звезд */
 .stars {
   background-image: url(../images/elements/icon-star.svg);
@@ -1166,22 +1176,21 @@ body {
   gap: 8px;
 }
 .pagination-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    width: 60px;
-    height: 60px;
-    border-radius: 4px;
-    background-color: #82B3D3;
-    font-family: PT Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    color:#FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  background-color: #82B3D3;
+  font-family: PT Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:#FFFFFF;
 }
 .pagination-link:hover {
   background-color: #68A2CA;
@@ -1223,223 +1232,154 @@ body {
   display: flex;
   margin: auto;
 }
-/* .modal-container__hidden {
-      display: none;
-}*/
 
-/*.catalog-search-button:hover + .modal-container,
-.catalog-search-button:focus + .modal-container {
-  display: block;
-}*/
+/* .modal-container--hidden {
+      display: none;
+} */
 
 .modal-container__content {
-  position: relative;
+  align-self: center;
+  justify-self: center;
+  min-width: 717px;
   margin: auto;
   padding: 64px 70px;
-  background-color: #FFFFFF;
-  align-self: center;
-  justify-self: center;
-}
-.modal-container__wrap {
-  min-width: 717px;
   box-sizing: border-box;
   border-radius: 30px;
-}
-.modal-container__appointment {
-  width: 577px;
-}
-.appointment-form_group {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-.appointment-form__list {
-  justify-content: space-between;
-}
-.appointment-form__checkin,
-.appointment-form__checkout {
-  grid-column: 1 / -1;
-}
-.appointment-form__item {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 48px;
-}
-.appointment-form__item p {
-  padding: 0 20px;
-  margin: 0;
-  margin-top: 4px;
-}
-.appointment-form__description {
-  font-family: PT Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  color: #000;
-  text-align: center;
-}
-.appointment-form__exception {
-  color: #FF5757;
-}
-.appointment-form__field {
-  display: flex;
-  align-items: center;
-  min-width: 440px;
-  min-height: 48px;
-  box-sizing: border-box;
-  padding: 12px 20px;
-  border-radius: 4px;
-  border: none;
-  background-color: #F2F2F2;
-  margin-left: auto;
-  color: #000;
-  font-family: PT Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-}
-.appointment-form__itemTitle {
-  color: #000;
-  font-family: PT Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px; /* 120% */
-  text-transform: capitalize;
-  align-self: center;
-  justify-self: center;
-}
-.appointment-form__icon {
+  background-color: #FFFFFF;
   position: relative;
-}
-.appointment-form__icon::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 535px;
-  background-image: url(../images/elements/calendar.svg);
-  background-repeat: no-repeat;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  opacity: 0.3;
-}
-.appointment-form__number {
-  display: flex;
-  width: 100%;
-}
-.appointment-field__number {
-  min-width: 110px;
-  margin-left: 46px;
-}
-.appointment-icon__adult {
-  position: relative;
-}
-.appointment-icon__adult::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 205px;
-  width: 20px;
-  height: 20px;
-  background-image: url(../images/elements/button-plus.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-.appointment-icon__adult::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 143px;
-  width: 20px;
-  height: 20px;
-  background-image: url(../images/elements/button-minus.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.appointment-icon__children {
-  position: relative;
-}
-.appointment-icon__children::before {
-  content: "";
+/* Кнопка закрыть попап */
+.modal-container__close--button {
   position: absolute;
-  top: 15px;
-  left: 165px;
-  width: 20px;
-  height: 20px;
-  background-image: url(../images/elements/button-plus.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-.appointment-icon__children::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 100px;
-  width: 20px;
-  height: 20px;
-  background-image: url(../images/elements/button-minus.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.modal-container__close {
+  content: "close";
   width: 52px;
   height: 52px;
-  background-color: #F2F2F2;
   border-radius: 50%;
+  background-color: #F2F2F2;
   border: none;
-  outline: none;
-  cursor: pointer;
-}
-.modal-container__button {
-  position: absolute;
-  top: 55px;
+  top: 50px;
   right: 50px;
-  color: #000000;
-  background-repeat: no-repeat;
-  background-position: center;
 }
-.modal-container__button:hover {
+
+.modal-container__close--button:hover {
   background-color: #E6E6E6;
 }
-.modal-container__button:focus {
+.modal-container__close--button :focus {
   background-color: #E6E6E6;
   border: solid #83B3D3;
 }
-.modal-container__button:active {
+.modal-container__close--button:active {
   background-color: #E6E6E6;
   color: #000000;
   opacity: 0.3;
 }
 
+/* Стилизация заголовков и текстов */
+
 .modal-container__title {
-  margin: 0;
-  margin-bottom: 64px;
   font-family: PT Sans;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #000;
   text-decoration: none;
+  margin: 0;
+  margin-bottom: 64px;
 }
-.appointment-form__button {
+
+.container__form__title {
+  font-family: PT Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000;
+  text-transform: capitalize;
+  align-self: center;
+  justify-self: center;
+}
+
+.container__form__field {
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000;
+}
+
+.container__form__description {
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000;
+  text-align: left;
+  }
+
+  .container__form--exception {
+    color: #FF5757;
+  }
+
+  /* Grid */
+
+.modal-container__form {
+  display: grid;
+  grid-template-columns: 120px 440px;
+  width: 577px;
+  margin: 0;
+  margin-bottom: 48px;
+  padding: 0;
+  column-gap: auto;
+}
+
+.container__form__title {
+  grid-column: 1 / 2;
+}
+
+.container__form__group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container__form__group p {
+  padding: 0 20px;
+  margin: 0;
+  margin-top: 4px;
+}
+
+.container__form__field {
   display: flex;
+  min-width: 440px;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  border-radius: 4px;
+  /* border: none; */
+  /* background-color: #F2F2F2; */
+  align-items: center;
+  margin-left: auto;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Кнопка в попапе - Найти */
+
+.search__button {
+  grid-column: 1 / -1;
   width: 577px;
   min-height: 60px;
   margin: 0;
@@ -1448,39 +1388,41 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
   box-sizing: border-box;
   border-radius: 10px;
+  color: #ffffff;
   background-color: #83B3D3;
   border: none;
 }
-.appointment-form__button:hover {
+
+.search__button:hover {
   background-color: #68A2CA;
   color: #FFFFFF;
 }
-.appointment-form__button:focus {
+.search__button:focus {
   background-color: #68A2CA;
   color: #FFFFFF;
   outline: none;
 }
-.appointment-form__button:active {
+.search__button:active {
   background-color: #82B3D3;
   color: #FFFFFF4D;
 }
-.appointment-form__button:disabled {
+.search__button:disabled {
   background-color: #E5E5E5;
   color: #FFFFFF;
 }
-.appointment-form__buttonTitle {
-  color: #FFF;
-  text-decoration: none;
-  text-align: center;
+.search__button--title {
   font-family: PT Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+  text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
 }
 
-/* Стилизация ултипа */
+/* Стилизация тултипа */
 .appointment-form__label {
   display: flex;
 }

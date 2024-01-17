@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Гостиницы</title>
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="styles/styles.css">
   <!--<link rel="stylesheet" href=""> -->
 </head>
@@ -75,17 +76,19 @@
                   <li class="filters-list__item">
                     <label class="filters-list__control">
                       <input class="filters-list__input" type="checkbox" name="swimming-pool" checked>Бассейн
-                      <span class="filters-list__swimmingPool visually-hidden"></span>
+                      <span class="swimming-pool visually-hidden"></span>
                     </label>
                   </li>
                   <li class="filters-list__item">
                     <label class="filters-list__control">
                       <input class="filters-list__input" type="checkbox" name="paking" checked>Парковка
+                      <span class="paking visually-hidden"></span>
                     </label>
                   </li>
                   <li class="filters-list__item">
                     <label class="filters-list__control">
                       <input class="filters-list__input" type="checkbox" name="wifi">Wi-Fi
+                      <span class="wifi visually-hidden"></span>
                     </label>
                   </li>
                 </ul>
@@ -114,24 +117,23 @@
 <!-- Range от до -->
               <fieldset class="filters-group filters-group__price">
                 <legend class="filters-title">Стоимость, Р:</legend>
-                <ul class="filters-list filters-list__price clear-list">
-                  <li class="filters-list__item filters-list__from">
-                    <label for="text" name="price-from">
-                      <input class="price-range price-range__from" type="text" name="price-from" placeholder="от">
-                    </label>
-                  </li>
-                  <li class="filters-list__item filters-list__to">
-                    <label for="text" name="price-to">
-                      <input class="price-range price-range__to" type="text" name="price-to" placeholder="до">
-                    </label>
-                  </li>
-                  <li class="filters-list__item filters-list__range">
-                    <label for="range"></label>
-                      <input type="range" name="price-range" min="0" max="100000">
-                    </label>
-                  </li>
+                <div class="range">
+                  <label class="range-form-from">
+                    <input class="range-from" type="number" value="0">
+                    <span>от</span>
+                  </label>
+                  <label class="range-form-to">
+                    <input class="range-to" type="number" value="9000">
+                    <span>до</span>
+                  </label>
+                </div>
+                <div class="range-scale">
+                  <label for="range-form-scale">
+                    <input type="range" name="price-range" min="0" max="100000">
+                  </label>
+                </div>
               </fieldset>
-
+<!-- Стилизация кнопок в фильтрах -->
               <div class="filters-group filters-group__battons">
                 <button class="filters-group__item filters-group-button__submit" type="submit" value="submit-parameter">Применить</button>
                 <button class="filters-group__item filters-group-button__reset" type="reset" value="reset-parameters">Сбросить</button>
@@ -152,19 +154,19 @@
 <!--Тип отображения карточек на странице-->
               <ul class="cards-view-list clear-list">
                 <li class="cards-view-item">
-                  <a class="cards-view cards-table" href="#">
+                  <button class="cards-view cards-table" type="submit" value="table">
                     <span class="visually-hidden">Отображать как карточки</span>
-                  </a>
+                  </button>
                 </li>
                 <li class="cards-view-item">
-                  <a class="cards-view cards-slideshow" href="#">
+                  <button class="cards-view cards-slideshow" type="submit" value="slideshow">
                     <span class="visually-hidden">Отображать как галерею</span>
-                  </a>
+                  </button>
                 </li>
                 <li class="cards-view-item">
-                  <a class="cards-view cards-list" href="#">
+                  <button class="cards-view cards-list" type="submit" value="list">
                     <span class="visually-hidden">Отображать как список</span>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -214,7 +216,7 @@
                 </div>
                 <p class="hotel-card-rating">Рейтинг 6,9</p>
               </li>
-              <li class="hotel-card-item last-card">
+              <li class="hotel-card-item">
                 <a class="hotel-card-link" href="#">
                   <img class="hotel-card-image" src="./images/hotels/green-tree-inn.jpg" alt="ГринТри Инн" width="300" height="212">
                 </a>
