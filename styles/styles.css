@@ -1231,6 +1231,7 @@ body {
   background: rgba(242, 242, 242, 0.80);
   display: flex;
   margin: auto;
+  z-index: 1;
 }
 
 /* .modal-container--hidden {
@@ -1275,7 +1276,7 @@ body {
   opacity: 0.3;
 }
 
-/* Стилизация заголовков и текстов */
+/* Стилизация заголовков и текстов в модальном окне*/
 
 .modal-container__title {
   font-family: PT Sans;
@@ -1322,57 +1323,108 @@ body {
   text-align: left;
   }
 
-  .container__form--exception {
-    color: #FF5757;
+.container__form--exception {
+  color: #FF5757;
   }
 
   /* Grid */
 
 .modal-container__form {
   display: grid;
-  grid-template-columns: 120px 440px;
+  grid-template-columns: 288px 288px;
+  grid-template-rows: repeat(3, auto);
   width: 577px;
+  row-gap: 48px;
   margin: 0;
-  margin-bottom: 48px;
   padding: 0;
-  column-gap: auto;
 }
 
-.container__form__title {
-  grid-column: 1 / 2;
+.container__form--checkin {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+.container__form--checkout {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+.container__form--adult {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+}
+
+.container__form--children {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
 }
 
 .container__form__group {
+  display: grid;
+  grid-template-columns: 120px 440px;
+  grid-template-rows: repeat(2, auto);
+  justify-content: space-between;
   border: none;
   margin: 0;
   padding: 0;
 }
 
-.container__form__group p {
-  padding: 0 20px;
-  margin: 0;
-  margin-top: 4px;
+.container__form__title {
+  grid-column: 1 / 2;
+  grid-row: 1;
 }
 
 .container__form__field {
-  display: flex;
+  grid-column: 2 / -1;
+  grid-row: 1;
   min-width: 440px;
   min-height: 48px;
   box-sizing: border-box;
   padding: 12px 20px;
   border-radius: 4px;
-  /* border: none; */
-  /* background-color: #F2F2F2; */
+  border: none;
+  background-color: #F2F2F2;
   align-items: center;
   margin-left: auto;
 }
-
-
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.container__form__description {
+  grid-column: 2 / -1;
+  grid-row: 2;
+  margin: 0;
+  margin-top: 4px;
+}
+
+.container__form__count {
+  display: flex;
+  width: 242px;
+  gap: 46px;
+}
+.field__number {
+  width: 110px;
+}
+
+/* Календарь */
+button.container__form--icon {
+  position: absolute;
+  content: "calendar";
+  fill: transparent;
+  background-color: transparent;
+  color: #000000;
+  opacity: 0.3;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  padding: 2px 2px 3px 2px;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 
@@ -1383,6 +1435,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 577px;
   min-height: 60px;
   margin: 0;
+  margin-top: 48px;
   padding: 0 77px;
   justify-content: center;
   align-items: center;
