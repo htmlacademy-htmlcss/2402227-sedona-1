@@ -74,21 +74,24 @@
                 <legend class="filters-title">Инфраструктура:</legend>
                 <ul class="filters-list clear-list">
                   <li class="filters-list__item">
-                    <label class="filters-list__control">
-                      <input class="filters-list__input" type="checkbox" name="swimming-pool" checked>Бассейн
-                      <span class="swimming-pool visually-hidden"></span>
+                    <label class="filters-list__control" for="swimming-pool">
+                      <input class="visually-hidden filters-list__input" type="checkbox" name="swimming-pool" id="swimming-pool" checked>
+                      <span class="control-item control-icon--tick"></span>
+                      <span class="control-label">Бассейн</span>
                     </label>
                   </li>
                   <li class="filters-list__item">
-                    <label class="filters-list__control">
-                      <input class="filters-list__input" type="checkbox" name="paking" checked>Парковка
-                      <span class="paking visually-hidden"></span>
+                    <label class="filters-list__control" for="parking">
+                      <input class="visually-hidden filters-list__input" type="checkbox" name="parking" id="parking" checked>
+                      <span class="control-item control-icon--tick"></span>
+                      <span class="control-label">Парковка</span>
                     </label>
                   </li>
                   <li class="filters-list__item">
-                    <label class="filters-list__control">
-                      <input class="filters-list__input" type="checkbox" name="wifi">Wi-Fi
-                      <span class="wifi visually-hidden"></span>
+                    <label class="filters-list__control" for="wifi">
+                      <input class="visually-hidden filters-list__input" type="checkbox" name="wifi" id="wifi">
+                      <span class="control-item"></span>
+                      <span class="control-label">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -98,18 +101,24 @@
                 <legend class="filters-title">Тип жилья:</legend>
                 <ul class="filters-list clear-list">
                   <li class="filters-list__item">
-                    <label class="filters-list__control">
-                      <input class="filters-list__input" type="radio" name="product-group" value="hotel" checked>Гостиница
+                    <label class="filters-list__control" for="hotel">
+                      <input class="visually-hidden filters-list__input" type="radio" name="product-group" value="hotel" id="hotel" checked>
+                      <span class="control-item control-label--round control-icon--round"></span>
+                      <span class="control-label">Гостиница</span>
                     </label>
                   </li>
                   <li class="filters-list__item">
-                    <label class="filters-list__control">
-                      <input class="filters-list__input" type="radio" name="product-group" value="motel">Мотель
+                    <label class="filters-list__control" for="motel">
+                      <input class="visually-hidden filters-list__input" type="radio" name="product-group" value="motel" id="motel">
+                      <span class="control-item control-label--round"></span>
+                      <span class="control-label">Мотель</span>
                     </label>
                   </li>
                   <li class="filters-list__item">
-                    <label class="filters-list__control">
-                      <input class="filters-list__input" type="radio" name="product-group" value="appartments">Апартаменты
+                    <label class="filters-list__control" for="appartments">
+                      <input class="visually-hidden filters-list__input" type="radio" name="product-group" value="appartments" id="appartments">
+                      <span class="control-item control-label--round"></span>
+                      <span class="control-label">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
@@ -118,19 +127,24 @@
               <fieldset class="filters-group filters-group__price">
                 <legend class="filters-title">Стоимость, Р:</legend>
                 <div class="range">
-                  <label class="range-form-from">
-                    <input class="range-from" type="number" value="0">
+                  <label class="range-form-from" for="from">
+                    <input class="range-form range-from" type="number" value="0" id="from">
                     <span>от</span>
                   </label>
-                  <label class="range-form-to">
-                    <input class="range-to" type="number" value="9000">
+                  <label class="range-form-to" for="to">
+                    <input class="range-form range-to" type="number" value="9000" id="to">
                     <span>до</span>
                   </label>
                 </div>
                 <div class="range-scale">
-                  <label for="range-form-scale">
-                    <input type="range" name="price-range" min="0" max="100000">
-                  </label>
+                  <div class="range-scale__bar" style="left: 0; width: 226px">
+                    <button class="range-toggle range-toggle--min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle range-toggle--max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
                 </div>
               </fieldset>
 <!-- Стилизация кнопок в фильтрах -->

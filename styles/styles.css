@@ -47,6 +47,9 @@ body {
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  z-index: -1;
 }
 .clear-list {
   list-style-type: none;
@@ -162,15 +165,17 @@ body {
 .navigation-link-main {
   display: block;
   padding: 20px 0;
-  margin: 0 18px;
-  font-family: PT Sans;
+  margin: 0 16px;
+  font-family: "PT Sans";
+  font-size: 20px;
+  font-style: normal;
   font-weight: 700;
+  line-height: 24px; /* 120% */
+  text-transform: capitalize;
   color: #000;
   background-color: #FFF;
   text-align: center;
   text-decoration: none;
-  text-transform: capitalize;
-  letter-spacing: 0.4px;
 }
 .navigation-link-current {
   text-decoration: none;
@@ -181,15 +186,15 @@ body {
   position: absolute;
   background-color: #756257;
   width: 100%;
-  height: 2px;
-  bottom: -2px;
+  height: 3px;
+  bottom: -3px;
   left: -2px;
   z-index: 1;
 }
 
 .navigation-link-attributes {
   display: block;
-  padding: 22px 12px;
+  padding: 22px 15px;
   font-family: PT Sans;
   font-weight: 700;
   color: #000;
@@ -236,8 +241,9 @@ body {
 /* Стилизация кнопки Хочу Сюда! */
 .navigation-button {
   min-width: 100px;
-  padding: 8px 30px;
-  margin-left: 22px;
+  padding: 8px 34px;
+  margin-left: 16px;
+  box-sizing: border-box;
   border-radius: 4px;
   border: none;
   background-color: #756157;
@@ -293,7 +299,7 @@ body {
   content: "";
   width: 1203px;
   height: 57px;
-  bottom: -2px;
+  bottom: 0;
   background-image: url(../images/elements/main-picture-decor-bottom.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -530,6 +536,7 @@ body {
     background: #F2F2F2;
     border-radius: 4px 0 0 4px;
     border: 0;
+    outline: none;
 }
 
 /* Стилизация кнопки Подписка */
@@ -740,6 +747,7 @@ body {
 }
 
 /* Блоки фильтров */
+
 .filters-group {
   display: flex;
   flex-direction: column;
@@ -754,6 +762,10 @@ body {
   margin-top: 32px;
   gap: 16px;
   color: #FFF;
+}
+
+.filters-list__item {
+  padding-left: 16px;
 }
 
 .filters-group__infrastructure .filters-list__input {
@@ -776,6 +788,66 @@ body {
 /* Отступы между элементами - фильтры */
 .filters-group__infrastructure {
   margin-right: 70px;
+}
+
+.filters-list__control {
+  position: relative;
+  display:block;
+  padding-left: 16px;
+}
+
+.control-item {
+  position: absolute;
+  content: "checkbox";
+  width: 20px;
+  height: 20px;
+  border-radius: 30%;
+  background-color: #ffffff;
+  border: none;
+  top: 0;
+  left: -15px;
+  cursor: pointer;
+}
+
+.control-label--round {
+  border-radius: 50%;
+}
+
+.filters-list__control:hover {
+  opacity: 0.6;
+}
+
+.filters-list__control:active {
+  opacity: 0.3;
+}
+
+.filters-list__control:focus .control-item {
+  border-radius: 4px;
+  border: 2px solid #83B3D3;
+}
+
+/* Не получается дизейбл .filters-list__input:disabled + .control-item {
+  color: #0000004D;
+} */
+
+.control-icon--round::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/elements/radio.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.control-icon--tick {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/elements/tick.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Range от до */
@@ -805,10 +877,22 @@ body {
   border: none;
 }
 
+.range-form:hover {
+  background: #E6E6E6;
+}
+
+.range-form:focus {
+  background: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+
+.range-form:active {
+  border: 3px solid #000000;
+}
+
 .range-from {
   margin-right: 1px;
   border-radius: 4px 0 0 4px;
-
 }
 
 .range-to {
@@ -836,14 +920,59 @@ body {
   opacity: 0.3;
 }
 
+/* Range Стилизация декоративного элемента */
+
+.range-scale {
+  width: 287px;
+  height: 4px;
+  background-color: #ffffff;
+  opacity: 0.3;
+  position: relative;
+}
+
+.range-scale__bar {
+  height: 4px;
+  background: #ffffff;
+  position: absolute;
+  z-index: 1;
+}
+
+.range-toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 30%;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  position: absolute;
+  cursor: pointer;
+}
+
+.range-toggle:focus,
+.range-toggle:active {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0 2px 3px 4px #000000;
+}
+
+.range-toggle--min {
+  top: -8px;
+  left: 0;
+}
+
+.range-toggle--max {
+  top: -8px;
+  right: -10px;
+
+}
+
+/* Стилизация кнопок в фильтрах */
+
 .filters-group__battons {
   min-width: 191px;
   margin-left: 70px;
   margin-top: 55px;
   gap: 32px;
 }
-
-/* Стилизация кнопок в фильтрах */
 
 .filters-group-button__submit,
 .filters-group-button__reset {
@@ -1256,9 +1385,9 @@ body {
   z-index: 1;
 }
 
-/* .modal-container--hidden {
+.modal-container--hidden {
       display: none;
-} */
+}
 
 .modal-container__content {
   align-self: center;
@@ -1435,6 +1564,7 @@ body {
   margin-left: 45px;
 }
 .container__form__count {
+  width: 110px;
   margin: 0;
   padding: 0;
   position: relative;
@@ -1449,7 +1579,6 @@ body {
   border: none;
   background-color: #F2F2F2;
   text-align: center;
-  margin-left: auto;
   font-family: PT Sans;
   font-size: 18px;
   font-style: normal;
@@ -1476,7 +1605,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: absolute;
   content: "more";
   top: 13px;
-  right: 40px;
+  right: 13px;
   border: none;
 }
 
