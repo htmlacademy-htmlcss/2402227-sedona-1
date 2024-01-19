@@ -156,7 +156,6 @@ body {
 }
 .navigation-menu-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -184,7 +183,8 @@ body {
   width: 100%;
   height: 2px;
   bottom: -2px;
-  left: 0;
+  left: -2px;
+  z-index: 1;
 }
 
 .navigation-link-attributes {
@@ -235,10 +235,9 @@ body {
 }
 /* Стилизация кнопки Хочу Сюда! */
 .navigation-button {
-  width: 160px;
-  min-height: 36px;
+  min-width: 100px;
   padding: 8px 30px;
-  margin-left: 20px;
+  margin-left: 22px;
   border-radius: 4px;
   border: none;
   background-color: #756157;
@@ -250,6 +249,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
 }
 .navigation-button:hover {
@@ -279,13 +279,12 @@ body {
 /*Векторный текст - приветствие*/
 .main-page-welcome {
     display: flex;
-    min-height: 485px;
     justify-content: center;
     background-image: url(../images/pictures/sedona-main.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #b1867d;
-    padding: 51px 371px 51px 371px;
+    padding: 46px 371px 83px 371px;
     position: relative;
 }
 .main-page-welcome::after {
@@ -311,7 +310,7 @@ body {
 .advantages-information {
     display: flex;
     flex-direction: column;
-    padding: 69px 0;
+    padding: 72px 0 90px 0;
     gap: 25px;
 }
 .invitation-details {
@@ -364,7 +363,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 180px 85px 80px 85px;
+  padding: 185px 85px 80px 85px;
   gap: 30px;
   box-sizing: border-box;
   position: relative;
@@ -416,7 +415,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 75px;
+  top: 78px;
   margin: auto;
 }
 .servises-item-house::before {
@@ -439,10 +438,10 @@ body {
 
 /* Стилизация кнопки Заинтересовались? */
 .catalog-search-button {
-  width: 367px;
-  min-height: 52px;
+  width: 375px;
+  min-height: 50px;
   padding: 8px 40px;
-  margin-top: 54px;
+  margin-top: 35px;
   align-self: center;
   box-sizing: border-box;
   font-family: PT Sans;
@@ -510,18 +509,27 @@ body {
     display: flex;
     flex-direction: row;
     color: #FFF;
-    margin-top: 54px;
+    margin-top: 37px;
 }
 .main-newslatter h2 {
   color: #FFF;
 }
+/* в учебных целях ипльзую класс и id */
 .newsletter-form #newsletter-email {
+    width: 452px;
+    min-height: 52px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-family: "PT Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
     color: #000;
+    opacity: 0.6;
     background: #F2F2F2;
     border-radius: 4px 0 0 4px;
     border: 0;
-    width: 452px;
-    min-height: 52px;
 }
 
 /* Стилизация кнопки Подписка */
@@ -565,7 +573,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 70px 30px 70px;
+  padding: 26px 70px 30px 70px;
 }
 
 /* footer. Соц. Сети */
@@ -662,7 +670,7 @@ body {
 
 /* Контейнер для фильтров и хлебных крошек */
 .catalog-page-filters__wrap {
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 68px 70px;
   background-image: url("../images/pictures/background-sedona-catalog.jpg");
   background-color: #756157;
   background-repeat: no-repeat;
@@ -687,26 +695,28 @@ body {
 }
 .breadcrumbs-list__item {
   display: flex;
+  height: 21px;
+  position: relative;
 }
 .breadcrumbs-list__link_home {
+  width: 13px;
+  height: 21px;
   padding-bottom: 2px;
   background-image: url("../images/breadcrumbs/icon-home.svg");
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 13px;
-  min-height: 12px;
-  position: relative;
+  background-position: 50% 50%;
   left: 4px;
 }
-.breadcrumbs-list__link_home::after {
+.breadcrumbs-list__item:not(:last-child)::after {
   content: "";
   background-image: url("../images/breadcrumbs/icon-arrow.svg");
   background-repeat: no-repeat;
   padding: 5px 7px;
   margin-left: 25px;
   position: absolute;
-  top: 2px;
-  left: 0;
+  top: 6px;
+  right: -28px;
 }
 .breadcrumbs-list__link_self {
     margin-left: 33px;
@@ -792,16 +802,17 @@ body {
   font-weight: 700;
   line-height: 24px;
   color: #000000;
+  border: none;
 }
 
 .range-from {
-  margin-right: 2px;
+  margin-right: 1px;
   border-radius: 4px 0 0 4px;
 
 }
 
 .range-to {
-  margin-left: 2px;
+  margin-left: 1px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -967,6 +978,10 @@ body {
   gap: 8px;
 }
 
+.cards-view-item {
+  display: flex;
+}
+
 .cards-view {
   display: inline-block;
   min-width: 48px;
@@ -1054,6 +1069,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   border-radius: 4px;
+  border: none;
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
@@ -1062,6 +1078,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
+  cursor: pointer;
 }
 
 /* Кнопка -> Подробнее */
@@ -1155,9 +1172,11 @@ body {
   background-image: url(../images/elements/icon-star.svg);
   background-repeat: space;
   height: 17px;
-  gap: 6px;
   align-self: center;
   justify-self: start;
+}
+.stars__1 {
+  width: 20px;
 }
 .stars__2 {
   width: 40px;
@@ -1167,6 +1186,9 @@ body {
 }
 .stars__4 {
   width: 85px;
+}
+.stars__5 {
+  width: 105px;
 }
 
 /* Пагинация */
@@ -1343,10 +1365,60 @@ body {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
 }
+
 .container__form--checkout {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
 }
+
+/* Стилизация Даты Заезд-Выезд */
+
+.container__form__group {
+  display: grid;
+  grid-template-columns: 120px 440px;
+  grid-template-rows: repeat(2, auto);
+  justify-content: space-between;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.container__form__title {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.container__form__field {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+.form__field--subject {
+  min-width: 440px;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  background-color: #F2F2F2;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Стилизация Больше-Меньше */
+.container__number__group {
+  display: grid;
+  width: 247px;
+  grid-template-columns: 92px 145px;
+  min-height: 48px;
+  gap: 46px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+}
+
 .container__form--adult {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -1359,33 +1431,31 @@ body {
   grid-row-start: 3;
 }
 
-.container__form__group {
-  display: grid;
-  grid-template-columns: 120px 440px;
-  grid-template-rows: repeat(2, auto);
-  justify-content: space-between;
-  border: none;
+.container__form--children .container__form__count {
+  margin-left: 45px;
+}
+.container__form__count {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
-.container__form__title {
-  grid-column: 1 / 2;
-  grid-row: 1;
-}
-
-.container__form__field {
-  grid-column: 2 / -1;
-  grid-row: 1;
-  min-width: 440px;
-  min-height: 48px;
+.form__field--number {
+  width: 110px;
+  height: 48px;
   box-sizing: border-box;
   padding: 12px 20px;
   border-radius: 4px;
   border: none;
   background-color: #F2F2F2;
-  align-items: center;
+  text-align: center;
   margin-left: auto;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -1399,32 +1469,41 @@ input[type=number]::-webkit-outer-spin-button {
   grid-row: 2;
   margin: 0;
   margin-top: 4px;
+  padding: 0 20px;
 }
 
-.container__form__count {
-  display: flex;
-  width: 242px;
-  gap: 46px;
+.container__form--more {
+  position: absolute;
+  content: "more";
+  top: 13px;
+  right: 40px;
+  border: none;
 }
-.field__number {
-  width: 110px;
+
+.container__form--less {
+  position: absolute;
+  content: "less";
+  top: 13px;
+  left: 5px;
+  border: none;
 }
 
 /* Календарь */
+
 button.container__form--icon {
   position: absolute;
   content: "calendar";
   fill: transparent;
   background-color: transparent;
+  border: none;
   color: #000000;
   opacity: 0.3;
   outline: none;
   width: 20px;
   height: 20px;
   padding: 2px 2px 3px 2px;
-  top: 0;
-  right: 0;
-  left: 0;
+  top: 12px;
+  right: 20px;
 }
 
 
@@ -1476,16 +1555,14 @@ button.container__form--icon {
 }
 
 /* Стилизация тултипа */
-.appointment-form__label {
-  display: flex;
-}
+
 .tooltip {
   position: absolute;
   content: "";
   width: 20px;
   height: 20px;
-  top: 13px;
-  left: 55px;
+  top: 15px;
+  left: 80px;
 }
 .tooltip-toggle {
   display: block;
