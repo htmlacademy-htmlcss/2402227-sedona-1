@@ -80,6 +80,7 @@ body {
   text-transform: uppercase;
   color: #000;
   text-align: center;
+  word-break: break-all;
   margin: 0;
   padding: 0;
 }
@@ -93,6 +94,7 @@ body {
   text-transform: uppercase;
   color: #000;
   text-align: center;
+  word-break: break-all;
   margin: 0;
   padding: 0;
 }
@@ -104,6 +106,7 @@ body {
   font-weight: 700;
   line-height: 24px;
   color: #FFF;
+  word-break: break-all;
   margin: 0;
   padding: 0;
 }
@@ -117,6 +120,7 @@ body {
   line-height: 26px;
   color: #333;
   text-align: center;
+  word-break: break-all;
   margin: 0;
   padding: 0;
 }
@@ -129,6 +133,7 @@ body {
   line-height: 21px;
   color: #000;
   text-align: center;
+  word-break: break-all;
   margin: 0;
   padding: 0;
 }
@@ -155,7 +160,6 @@ body {
 }
 .navigation-attributes-list {
   display: flex;
-  flex-wrap: wrap;
 }
 .navigation-menu-item {
   display: flex;
@@ -330,6 +334,7 @@ body {
 .advantages-list,
 .servises-list {
     display: flex;
+    flex-wrap: wrap;
 }
 .items-list-wrapper {
     display: flex;
@@ -337,10 +342,15 @@ body {
     justify-content: center;
     align-items: center;
     width: 400px;
-    height: 385px;
+    min-height: 385px;
     gap: 60px;
     box-sizing: border-box;
     margin-bottom: 0;
+    overflow: hidden;
+}
+
+.items-picture-wrapper {
+  background-size: cover;
 }
 
 /* Разделительный элемент */
@@ -555,6 +565,8 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  text-align: center;
+  word-break: break-all;
   cursor: pointer;
 }
 .newsletter-submit-button:hover {
@@ -682,6 +694,7 @@ body {
   background-color: #756157;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 .catalog-page-filters__title {
   width: 494px;
@@ -693,6 +706,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 78px;
+  word-break: break-all;
 }
 
 /* Хлебные крошки */
@@ -798,7 +812,7 @@ body {
 
 .control-item {
   position: absolute;
-  content: "checkbox";
+  content: "";
   width: 20px;
   height: 20px;
   border-radius: 30%;
@@ -821,26 +835,31 @@ body {
   opacity: 0.3;
 }
 
-.filters-list__control:focus .control-item {
-  border-radius: 4px;
-  border: 2px solid #83B3D3;
+.filters-list__input:focus + .control-item {
+  border-radius: 2px;
+  outline: 4px solid #83B3D3;
+}
+.filters-list__input:focus + .control-label--round {
+  border-radius: 50%;
+  outline: 4px solid #83B3D3;
 }
 
 /* Не получается дизейбл .filters-list__input:disabled + .control-item {
   color: #0000004D;
 } */
 
-.control-icon--round::after {
+.filters-list__input[type=radio]:checked + .control-item::after {
   position: absolute;
   content: "";
-  width: 20px;
-  height: 20px;
-  background-image: url("../images/elements/radio.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
 }
 
-.control-icon--tick {
+.filters-list__input[type=checkbox]:checked + .control-item::after {
   position: absolute;
   content: "";
   width: 20px;
@@ -867,27 +886,28 @@ body {
   padding: 12px 20px;
   box-sizing: border-box;
   background-color: #F2F2F2;
-  outline: none;
   font-family: PT Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
   color: #000000;
-  border: none;
+  border: 2px solid #F2F2F2;
+  outline: none;
 }
 
 .range-form:hover {
   background: #E6E6E6;
+  border-color: #F2F2F2;
 }
 
 .range-form:focus {
   background: #E6E6E6;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .range-form:active {
-  border: 3px solid #000000;
+  border: 2px solid #000000;
 }
 
 .range-from {
@@ -925,8 +945,7 @@ body {
 .range-scale {
   width: 287px;
   height: 4px;
-  background-color: #ffffff;
-  opacity: 0.3;
+  background-color: rgba(255, 255, 255, 0.3);
   position: relative;
 }
 
@@ -1410,6 +1429,7 @@ body {
   border-radius: 50%;
   background-color: #F2F2F2;
   border: none;
+  outline: none;
   top: 50px;
   right: 50px;
 }
@@ -1419,7 +1439,7 @@ body {
 }
 .modal-container__close--button :focus {
   background-color: #E6E6E6;
-  border: solid #83B3D3;
+  outline: 2px solid #83B3D3;
 }
 .modal-container__close--button:active {
   background-color: #E6E6E6;
@@ -1461,7 +1481,24 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  color: #000;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.container__form__field:hover {
+  background-color: #E6E6E6;
+}
+
+.container__form__field:focus {
+  border-radius: 4px;
+  border: 3px solid #83B3D3;
+  background-color: #E6E6E6;
+}
+
+.container__form__field:active {
+  color: #000000;
+  border: 2px solid #000;
+  background-color: #F2F2F2;
 }
 
 .container__form__description {
@@ -1530,6 +1567,7 @@ body {
   padding: 12px 20px;
   border-radius: 4px;
   border: none;
+  outline: none;
   background-color: #F2F2F2;
   align-items: center;
   margin-left: auto;
@@ -1561,7 +1599,7 @@ body {
 }
 
 .container__form--children .container__form__count {
-  margin-left: 45px;
+  justify-self: end;
 }
 .container__form__count {
   width: 110px;
@@ -1602,19 +1640,51 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .container__form--more {
+  display: flex;
+  align-self: center;
   position: absolute;
   content: "more";
-  top: 13px;
-  right: 13px;
+  top: 14px;
+  right: 6px;
   border: none;
+  outline: none;
+}
+
+.container__form--more:hover svg {
+  fill: #000000;
+}
+
+.container__form--more:focus svg {
+  fill: #000000;
+  border-radius: 4px;
+  outline: 3px solid #82B3D3;
+}
+
+.container__form--more:active svg {
+  fill: rgba(0, 0, 0, 1);
 }
 
 .container__form--less {
   position: absolute;
   content: "less";
-  top: 13px;
-  left: 5px;
+  top: 14px;
+  left: 6px;
   border: none;
+  outline: none;
+}
+
+.container__form--less:hover svg {
+  fill: #000000;
+}
+
+.container__form--less:focus svg {
+  fill: #000000;
+  border-radius: 4px;
+  outline: 3px solid #82B3D3;
+}
+
+.container__form--less:active svg {
+  fill: rgba(0, 0, 0, 1);
 }
 
 /* Календарь */
