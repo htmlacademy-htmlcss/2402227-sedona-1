@@ -41,7 +41,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333;
-  background: #ffffff;
+  background: #f2f2f2;
 }
 
 /* Общая обертка сайта на всех страницах */
@@ -50,7 +50,7 @@ body {
   margin: 0 auto;
   padding: 0;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  z-index: -1;
+  background: #ffffff;
 }
 
 .clear-list {
@@ -63,38 +63,40 @@ body {
 
 /*Стилизация Заголовков H1 уровня */
 .catalog-main-header {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: 78px;
-  color: #fff;
+  color: #ffffff;
   margin: 0;
   padding: 0;
 }
+
 /*Стилизация Заголовков H2 уровня*/
 .main-logic-title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  color: #000;
+  color: #000000;
   text-align: center;
   word-break: break-all;
   margin: 0;
   padding: 0;
 }
+
 /*Стилизация Заголовков H3 уровня*/
 .list-title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
-  color: #000;
+  color: #000000;
   text-align: center;
   word-break: break-all;
   margin: 0;
@@ -103,12 +105,12 @@ body {
 
 /*Стилизация Заголовков H4 уровня*/
 .catalog-filter-title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  color: #fff;
+  color: #ffffff;
   word-break: break-all;
   margin: 0;
   padding: 0;
@@ -116,12 +118,12 @@ body {
 
 /*Стилизация описаний H2 уровня*/
 .description-details {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
-  color: #333;
+  color: #333333;
   text-align: center;
   word-break: break-all;
   margin: 0;
@@ -130,12 +132,12 @@ body {
 
 /*Стилизация описаний H3 уровня*/
 .list-description-details {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
-  color: #000;
+  color: #000000;
   text-align: center;
   word-break: break-all;
   margin: 0;
@@ -177,14 +179,14 @@ body {
   display: block;
   padding: 20px 0;
   margin: 0 16px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px; /* 120% */
   text-transform: capitalize;
-  color: #000;
-  background-color: #fff;
+  color: #000000;
+  background-color: #ffffff;
   text-align: center;
   text-decoration: none;
 }
@@ -207,11 +209,11 @@ body {
 
 .navigation-link-attributes {
   display: block;
-  padding: 22px 15px;
-  font-family: PT Sans;
+  padding: 22px 15px 22px 14px;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
-  color: #000;
-  background-color: #fff;
+  color: #000000;
+  background-color: #ffffff;
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
@@ -226,13 +228,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .navigation-search {
   background-image: url("../images/elements/icon-search.svg");
 }
+
 .navigation-favourites {
   background-image: url("../images/elements/icon-favoriets.svg");
   position: relative;
 }
+
 .favourites-number {
   display: flex;
   justify-content: center;
@@ -249,11 +254,12 @@ body {
   line-height: 10px;
   position: absolute;
   top: 10px;
-  right: 2px;
+  right: 5px;
 }
+
 /* Стилизация кнопки Хочу Сюда! */
 .navigation-button {
-  min-width: 150px;
+  min-width: 160px;
   padding: 8px 8px;
   margin-left: 16px;
   box-sizing: border-box;
@@ -262,7 +268,7 @@ body {
   background-color: #756157;
   color: #ffffff;
   text-align: center;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -271,19 +277,23 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
 .navigation-button:hover {
   background-color: #615048;
   color: #ffffff;
 }
+
 .navigation-button:focus {
   background-color: #615048;
   color: #ffffff;
   outline: none;
 }
+
 .navigation-button:active {
   background-color: #756157;
   color: #ffffff4d;
 }
+
 .navigation-button:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
@@ -305,6 +315,7 @@ body {
   padding: 46px 371px 83px 371px;
   position: relative;
 }
+
 .main-page-welcome::after {
   display: inline-block;
   position: absolute;
@@ -331,6 +342,7 @@ body {
   padding: 72px 0 90px 0;
   gap: 25px;
 }
+
 .invitation-details {
   display: flex;
   flex-direction: column;
@@ -344,6 +356,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
 .items-list-wrapper {
   display: flex;
   flex-direction: column;
@@ -365,6 +378,7 @@ body {
 .advantages-title {
   position: relative;
 }
+
 .advantages-title::after {
   content: "";
   position: absolute;
@@ -376,49 +390,59 @@ body {
   left: 0;
   right: 0;
 }
+
 .items-picture-wrapper {
   display: flex;
 }
+
 /*Внутренние отступы в преимуществах и сервисе*/
 .advantages-list-wrapper {
-  padding: 103px 85px;
+  padding: 103px 55px;
 }
+
 .servises-list-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 185px 85px 80px 85px;
+  padding: 185px 55px 80px 55px;
   gap: 30px;
   box-sizing: border-box;
   position: relative;
 }
+
 .advantages-item-devil,
 .advantages-item-city {
   background-color: #82b3d3;
-  color: #fff;
+  color: #ffffff;
 }
+
 .advantages-item-devil .advantages-title::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
 .advantages-item-city .advantages-title::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-item-city * {
-  color: #fff;
+  color: #ffffff;
 }
+
 .advantages-item-devil * {
-  color: #fff;
+  color: #ffffff;
 }
+
 .advantages-item-squere,
 .advantages-item-tourists,
 .servises-item-house,
 .servises-item-suvenirs {
   background-color: rgba(131, 179, 211, 0.12);
 }
+
 .advantages-item-road {
   background-color: rgba(131, 179, 211, 0.2);
 }
+
 .servises-item-food {
   background-color: none;
 }
@@ -429,6 +453,7 @@ body {
 .servises-item-food {
   position: relative;
 }
+
 .servises-list-wrapper::before {
   content: "";
   display: inline-block;
@@ -442,12 +467,15 @@ body {
   top: 78px;
   margin: auto;
 }
+
 .servises-item-house::before {
   background-image: url(../images/advantages-icons/icon-house.svg);
 }
+
 .servises-item-suvenirs::before {
   background-image: url(../images/advantages-icons/icon-suvenirs.svg);
 }
+
 .servises-item-food::before {
   background-image: url(../images/advantages-icons/icon-food.svg);
 }
@@ -464,11 +492,11 @@ body {
 .catalog-search-button {
   width: 375px;
   min-height: 50px;
-  padding: 8px 40px;
+  padding: 8px 8px;
   margin-top: 35px;
   align-self: center;
   box-sizing: border-box;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -477,19 +505,22 @@ body {
   text-align: center;
   text-transform: uppercase;
   background: #756157;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
 }
+
 .catalog-search-button:hover {
   background-color: #615048;
   color: #ffffff;
 }
+
 .catalog-search-button:focus {
   background-color: #615048;
   color: #ffffff;
   outline: none;
 }
+
 .catalog-search-button:active {
   background-color: #756157;
   color: #ffffff4d;
@@ -509,32 +540,38 @@ body {
   background-position: center;
   align-items: center;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #ffffff;
 }
+
 .main-newslatter {
   background-image: url("../images/pictures/subscribe.jpg");
   background-color: #756157;
   background-position: center;
   background-size: cover;
 }
+
 .newsletter-description {
-  color: #fff;
+  color: #ffffff;
 }
+
 /* Цвет Заголовка и Текста в подписке Каталога */
 .catalog-newsletter-description {
-  color: #000;
+  color: #000000;
 }
+
 .catalog-logic-title {
-  color: #000;
+  color: #000000;
 }
+
 .newsletter-form {
   display: flex;
   flex-direction: row;
-  color: #fff;
-  margin-top: 37px;
+  color: #ffffff;
+  margin-top: 33px;
 }
+
 .main-newslatter h2 {
-  color: #fff;
+  color: #ffffff;
 }
 /* в учебных целях ипльзую класс и id */
 .newsletter-form #newsletter-email {
@@ -542,13 +579,12 @@ body {
   min-height: 52px;
   padding: 12px 20px;
   box-sizing: border-box;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  color: #000;
-  opacity: 0.6;
+  color: #000000;
   background: #f2f2f2;
   border-radius: 4px 0 0 4px;
   border: 0;
@@ -565,7 +601,7 @@ body {
   border: none;
   background-color: #82b3d3;
   color: #fff;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -575,19 +611,23 @@ body {
   word-break: break-all;
   cursor: pointer;
 }
+
 .newsletter-submit-button:hover {
   background-color: #68a2ca;
   color: #ffffff;
 }
+
 .newsletter-submit-button:focus {
   background-color: #68a2ca;
   color: #ffffff;
   outline: none;
 }
+
 .newsletter-submit-button:active {
   background-color: #82b3d3;
   color: #ffffff4d;
 }
+
 .newsletter-submit-button:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
@@ -609,10 +649,12 @@ body {
   min-width: 142px;
   margin: 0;
 }
+
 .footer-social-list {
   display: flex;
   align-items: center;
 }
+
 .footer-social-link {
   display: flex;
   justify-content: center;
@@ -630,10 +672,12 @@ body {
 .footer-social-link:hover path {
   fill: #68a2ca;
 }
+
 .footer-social-link:focus path {
   fill: #68a2ca;
   outline: none;
 }
+
 .footer-social-link:active path {
   fill: #68a2ca4d;
 }
@@ -650,7 +694,7 @@ body {
 .footer-contacts-address a[href^="tel:"] {
   color: #000000;
   text-decoration-line: none;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -659,13 +703,16 @@ body {
   cursor: pointer;
   outline: none;
 }
+
 .footer-contacts-address a:hover {
   color: #756157;
 }
+
 .footer-contacts-address a:focus {
   color: #756157;
   outline: none;
 }
+
 .footer-contacts-address a:active {
   color: #7561574d;
 }
@@ -680,13 +727,16 @@ body {
   cursor: pointer;
   outline: none;
 }
+
 .htmlacademy-link:hover path {
   fill: #756157;
 }
+
 .htmlacademy-link:focus path {
   fill: #756157;
   outline: none;
 }
+
 .htmlacademy-link:active path {
   fill: #7561574d;
 }
@@ -702,12 +752,13 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+
 .catalog-page-filters__title {
   width: 494px;
   margin: 0;
   margin-bottom: 8px;
   color: #ffffff;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
@@ -720,11 +771,15 @@ body {
   display: flex;
   align-items: center;
 }
+
 .breadcrumbs-list__item {
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 21px;
   position: relative;
 }
+
 .breadcrumbs-list__link_home {
   width: 13px;
   height: 21px;
@@ -735,6 +790,7 @@ body {
   background-position: 50% 50%;
   left: 4px;
 }
+
 .breadcrumbs-list__item:not(:last-child)::after {
   content: "";
   background-image: url("../images/breadcrumbs/icon-arrow.svg");
@@ -742,13 +798,14 @@ body {
   padding: 5px 7px;
   margin-left: 25px;
   position: absolute;
-  top: 6px;
-  right: -28px;
+  top: 5px;
+  right: -25px;
 }
+
 .breadcrumbs-list__link_self {
-  margin-left: 33px;
+  margin-left: 28px;
   color: #ffffff;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   text-align: center;
@@ -767,10 +824,7 @@ body {
 }
 
 /* Блоки фильтров */
-
 .filters-group {
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
   border: none;
@@ -781,7 +835,7 @@ body {
   flex-direction: column;
   margin-top: 32px;
   gap: 16px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .filters-list__item {
@@ -791,12 +845,13 @@ body {
 .filters-group__infrastructure .filters-list__input {
   margin-right: 16px;
 }
+
 .filters-group__housetype .filters-list__input {
   margin-right: 16px;
 }
 
 .filters-title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -845,14 +900,15 @@ body {
   border-radius: 2px;
   outline: 4px solid #83b3d3;
 }
+
 .filters-list__input:focus + .control-label--round {
   border-radius: 50%;
   outline: 4px solid #83b3d3;
 }
 
-/* Не получается дизейбл .filters-list__input:disabled + .control-item {
-  color: #0000004D;
-} */
+.filters-list__input[type="checked"]:disabled + .control-item {
+  color: #0000004d;
+}
 
 .filters-list__input[type="radio"]:checked + .control-item::after {
   position: absolute;
@@ -892,7 +948,7 @@ body {
   padding: 12px 20px;
   box-sizing: border-box;
   background-color: #f2f2f2;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -900,6 +956,17 @@ body {
   color: #000000;
   border: 2px solid #f2f2f2;
   outline: none;
+}
+
+/* Стилизация раздела для Firefox браузера */
+.range input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .range-form:hover {
@@ -929,6 +996,7 @@ body {
 .range label {
   position: relative;
 }
+
 .range span {
   position: absolute;
   content: "";
@@ -937,7 +1005,7 @@ body {
   min-width: 20px;
   min-height: 24px;
   transform: translateY(-50%);
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -947,15 +1015,16 @@ body {
 }
 
 /* Range Стилизация декоративного элемента */
-
 .range-scale {
   width: 287px;
   height: 4px;
+  top: 6px;
   background-color: rgba(255, 255, 255, 0.3);
   position: relative;
 }
 
 .range-scale__bar {
+  width: 266px;
   height: 4px;
   background: #ffffff;
   position: absolute;
@@ -980,18 +1049,19 @@ body {
 }
 
 .range-toggle--min {
-  top: -8px;
+  top: -6px;
   left: 0;
 }
 
 .range-toggle--max {
-  top: -8px;
-  right: -10px;
+  top: -6px;
+  right: -2px;
 }
 
 /* Стилизация кнопок в фильтрах */
-
 .filters-group__battons {
+  display: flex;
+  flex-direction: column;
   min-width: 191px;
   margin-left: 70px;
   margin-top: 55px;
@@ -1003,7 +1073,7 @@ body {
   width: 191px;
   min-height: 36px;
   padding: 8px 50px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1020,19 +1090,23 @@ body {
 .filters-group-button__submit {
   background-color: #82b3d3;
 }
+
 .filters-group-button__submit:hover {
   background-color: #68a2ca;
   color: #ffffff;
 }
+
 .filters-group-button__submit:focus {
   background-color: #68a2ca;
   color: #ffffff;
   outline: none;
 }
+
 .filters-group-button__submit:active {
   background-color: #82b3d3;
   color: #ffffff4d;
 }
+
 .filters-group-button__submit:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
@@ -1042,17 +1116,21 @@ body {
 .filters-group-button__reset {
   background-color: transparent;
 }
+
 .filters-group-button__reset:hover {
   color: #ffffff4d;
 }
+
 .filters-group-button__reset:focus {
   border: 3px solid #83b3d3;
   color: #ffffff;
   outline: none;
 }
+
 .filters-group-button__reset:active {
   color: #ffffff4d;
 }
+
 .filters-group-button__reset:disabled {
   color: #ffffff4d;
 }
@@ -1102,6 +1180,13 @@ body {
   line-height: 21px;
 }
 
+.select-control input[type="button"]:-moz-autofill,
+.select-control input[type="button"]:-moz-autofill-preview,
+.select-control input[type="button"]:-webkit-autofill {
+  filter: none;
+  background: #ffffff;
+}
+
 .select-icon {
   background-image: url("../images/elements/cheaper-array.svg");
   background-repeat: no-repeat;
@@ -1113,13 +1198,16 @@ body {
 .select-control:hover {
   border-color: #68a2ca;
 }
+
 .select-control:focus {
   border-color: #68a2ca;
   outline: none;
 }
+
 .select-control:active {
   border-color: #3f5e72;
 }
+
 .select-control:disabled {
   opacity: 30%;
 }
@@ -1153,10 +1241,12 @@ body {
 .cards-view:hover {
   border-color: #000;
 }
+
 .cards-view:focus {
   border-color: #68a2ca;
   outline: none;
 }
+
 .cards-view:active {
   border-color: #000;
 }
@@ -1164,9 +1254,11 @@ body {
 .cards-table {
   background-image: url("../images/elements/cards-table.svg");
 }
+
 .cards-slideshow {
   background-image: url("../images/elements/cards-slideshow.svg");
 }
+
 .cards-list {
   background-image: url("../images/elements/cards-list.svg");
 }
@@ -1193,7 +1285,7 @@ body {
 .hotel-card-link {
   grid-column: 1 / -1;
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 
 .hotel-card-image {
@@ -1229,7 +1321,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1241,19 +1333,23 @@ body {
 .button-more {
   background-color: #756157;
 }
+
 .button-more:hover {
   background-color: #615048;
   color: #ffffff;
 }
+
 .button-more:focus {
   background-color: #615048;
   color: #ffffff;
   outline: none;
 }
+
 .button-more:active {
   background-color: #756157;
   color: #ffffff4d;
 }
+
 .button-more:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
@@ -1263,19 +1359,23 @@ body {
 .button-favourite {
   background-color: #82b3d3;
 }
+
 .button-favourite:hover {
   background-color: #68a2ca;
   color: #ffffff;
 }
+
 .button-favourite:focus {
   background-color: #68a2ca;
   color: #ffffff;
   outline: none;
 }
+
 .button-favourite:active {
   background-color: #82b3d3;
   color: #ffffff4d;
 }
+
 .button-favourite:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
@@ -1285,19 +1385,23 @@ body {
 .favourite-added {
   background-color: #7db54f;
 }
+
 .favourite-added:hover {
   background-color: #6c9e42;
   color: #ffffff;
 }
+
 .favourite-addedfocus {
   background-color: #6c9e42;
   color: #ffffff;
   outline: none;
 }
+
 .favourite-added:active {
   background-color: #7db54f;
   color: #ffffff4d;
 }
+
 .favourite-added:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
@@ -1312,10 +1416,10 @@ body {
   grid-column-end: -1;
   border-radius: 4px;
   background-color: #f2f2f2;
-  color: #333;
+  color: #333333;
   text-align: center;
   text-transform: uppercase;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1331,18 +1435,23 @@ body {
   align-self: center;
   justify-self: start;
 }
+
 .stars__1 {
   width: 20px;
 }
+
 .stars__2 {
   width: 40px;
 }
+
 .stars__3 {
   width: 65px;
 }
+
 .stars__4 {
   width: 85px;
 }
+
 .stars__5 {
   width: 105px;
 }
@@ -1353,6 +1462,7 @@ body {
   margin-top: 40px;
   gap: 8px;
 }
+
 .pagination-link {
   display: flex;
   justify-content: center;
@@ -1362,7 +1472,7 @@ body {
   height: 60px;
   border-radius: 4px;
   background-color: #82b3d3;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -1370,29 +1480,34 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
+
 .pagination-link:hover {
   background-color: #68a2ca;
   color: #ffffff;
 }
+
 .pagination-link:focus {
   background-color: #68a2ca;
   color: #ffffff;
   outline: none;
 }
+
 .pagination-link:active {
   background-color: #82b3d3;
   color: #ffffff;
   opacity: 30%;
 }
+
 .pagination-current {
-  color: #000;
+  color: #000000;
   background-color: #f2f2f2;
 }
+
 .pagination-link-next {
   color: #000000;
   background-color: transparent;
   padding: 16px 0 18px 0;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -1420,6 +1535,7 @@ body {
   align-self: center;
   justify-self: center;
   min-width: 717px;
+  min-height: 576px;
   margin: auto;
   padding: 64px 70px;
   box-sizing: border-box;
@@ -1440,17 +1556,19 @@ body {
   border-radius: 50%;
   background-color: #f2f2f2;
   border: none;
-  top: 50px;
+  top: 65px;
   right: 50px;
 }
 
 .modal-container__close--button:hover {
   background-color: #e6e6e6;
 }
+
 .modal-container__close--button :focus {
   background-color: #e6e6e6;
   outline: 2px solid #83b3d3;
 }
+
 .modal-container__close--button:active {
   background-color: #e6e6e6;
   color: #000000;
@@ -1458,35 +1576,33 @@ body {
 }
 
 /* Стилизация заголовков и текстов в модальном окне*/
-
 .modal-container__title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
   background-color: #ffffff;
-  color: #000;
+  color: #000000;
   text-decoration: none;
   margin: 0;
   margin-bottom: 64px;
 }
 
 .container__form__title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  color: #000;
+  color: #000000;
   text-transform: capitalize;
   align-self: center;
-  justify-self: center;
 }
 
 .container__form__field {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -1515,12 +1631,12 @@ body {
 }
 
 .container__form__description {
-  font-family: PT Sans;
-  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
-  color: #000;
+  color: #000000;
   text-align: left;
 }
 
@@ -1529,11 +1645,10 @@ body {
 }
 
 /* Grid */
-
 .modal-container__form {
   display: grid;
   grid-template-columns: 288px 288px;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
   width: 577px;
   row-gap: 48px;
   margin: 0;
@@ -1551,7 +1666,6 @@ body {
 }
 
 /* Стилизация Даты Заезд-Выезд */
-
 .container__form__group {
   display: grid;
   grid-template-columns: 120px 440px;
@@ -1577,11 +1691,9 @@ body {
   min-width: 440px;
   min-height: 48px;
   box-sizing: border-box;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-radius: 4px;
   background-color: #f2f2f2;
-  align-items: center;
-  margin-left: auto;
 }
 
 /* Стилизация Больше-Меньше */
@@ -1590,7 +1702,7 @@ body {
   width: 247px;
   grid-template-columns: 92px 145px;
   min-height: 48px;
-  gap: 46px;
+  column-gap: 46px;
   margin: 0;
   padding: 0;
   border: none;
@@ -1612,6 +1724,7 @@ body {
 .container__form--children .container__form__count {
   justify-self: end;
 }
+
 .container__form__count {
   width: 110px;
   margin: 0;
@@ -1621,19 +1734,19 @@ body {
 
 .form__field--number {
   width: 110px;
-  height: 48px;
+  min-height: 48px;
   box-sizing: border-box;
   padding: 12px 20px;
   border-radius: 4px;
   border: none;
   background-color: #f2f2f2;
   text-align: center;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  color: #000;
+  color: #000000;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -1705,31 +1818,35 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /* Календарь */
-
 button.container__form--icon {
   position: absolute;
   content: "calendar";
-  fill: transparent;
-  background-color: transparent;
-  border: none;
-  color: #000000;
   opacity: 0.3;
   width: 20px;
   height: 20px;
-  padding: 2px 2px 3px 2px;
+  padding: 2px 2px 2px 2px;
+  border: none;
+  outline: none;
   top: 14px;
   right: 20px;
-  outline: none;
+}
+
+button.container__form--icon:hover path {
+  fill: #000000;
+  opacity: 1;
+}
+
+button.container__form--icon:focus {
+  border-radius: 4px;
+  outline: 3px solid #82b3d3;
 }
 
 /* Кнопка в попапе - Найти */
-
 .search__button {
   grid-column: 1 / -1;
   width: 577px;
   min-height: 60px;
   margin: 0;
-  margin-top: 48px;
   padding: 0 77px;
   justify-content: center;
   align-items: center;
@@ -1738,27 +1855,7 @@ button.container__form--icon {
   color: #ffffff;
   background-color: #83b3d3;
   border: none;
-}
-
-.search__button:hover {
-  background-color: #68a2ca;
-  color: #ffffff;
-}
-.search__button:focus {
-  background-color: #68a2ca;
-  color: #ffffff;
-  outline: none;
-}
-.search__button:active {
-  background-color: #82b3d3;
-  color: #ffffff4d;
-}
-.search__button:disabled {
-  background-color: #e5e5e5;
-  color: #ffffff;
-}
-.search__button--title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -1766,6 +1863,26 @@ button.container__form--icon {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.search__button:hover {
+  background-color: #68a2ca;
+  color: #ffffff;
+}
+
+.search__button:focus {
+  background-color: #68a2ca;
+  color: #ffffff;
+  outline: none;
+}
+
+.search__button:active {
+  background-color: #82b3d3;
+  color: #ffffff4d;
+}
+
+.search__button:disabled {
+  background-color: #e5e5e5;
   color: #ffffff;
 }
 
@@ -1777,8 +1894,9 @@ button.container__form--icon {
   width: 20px;
   height: 20px;
   top: 15px;
-  left: 80px;
+  left: 65px;
 }
+
 .tooltip-toggle {
   display: block;
   margin: 0;
@@ -1787,12 +1905,14 @@ button.container__form--icon {
   background-color: transparent;
   cursor: pointer;
 }
+
 .tooltip-icon {
   border-radius: 50%;
   background-color: #83b3d3;
 }
+
 .tooltip-text {
-  background-color: #333;
+  background-color: #333333;
   text-align: left;
   color: #fff;
   min-width: 256px;
@@ -1801,7 +1921,7 @@ button.container__form--icon {
   box-sizing: border-box;
   border-radius: 10px;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1813,6 +1933,7 @@ button.container__form--icon {
   z-index: 1;
   display: none;
 }
+
 .tooltip-text::before {
   background-image: url(../images/elements/triangle.svg);
   position: absolute;
@@ -1825,6 +1946,7 @@ button.container__form--icon {
   margin-left: 0;
   margin-right: 0;
 }
+
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
