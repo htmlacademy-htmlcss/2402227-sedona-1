@@ -36,21 +36,23 @@ html {
 }
 
 body {
+  height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333;
-  background-color: #FFF;
-  height: 100%;
+  background: #ffffff;
 }
+
 /* Общая обертка сайта на всех страницах */
 .page-container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   z-index: -1;
 }
+
 .clear-list {
   list-style-type: none;
   margin: 0;
@@ -244,8 +246,8 @@ body {
 }
 /* Стилизация кнопки Хочу Сюда! */
 .navigation-button {
-  min-width: 100px;
-  padding: 8px 34px;
+  min-width: 150px;
+  padding: 8px 8px;
   margin-left: 16px;
   box-sizing: border-box;
   border-radius: 4px;
@@ -349,8 +351,8 @@ body {
     overflow: hidden;
 }
 
-.items-picture-wrapper {
-  background-size: cover;
+.picture-item {
+  object-fit: cover;
 }
 
 /* Разделительный элемент */
@@ -1176,7 +1178,9 @@ body {
 .hotel-card-item {
   display: grid;
   grid-template-columns: repeat(2, 140px);
+  grid-template-rows: auto 1fr auto auto;
   justify-self: center;
+  align-items: center;
   gap: 16px 20px;
   padding: 20px;
   border-radius: 4px;
@@ -1197,6 +1201,7 @@ body {
   grid-column: 1 / -1;
   text-transform: none;
   text-align: start;
+  align-self: start;
 }
 
 .hotel-type {
@@ -1422,6 +1427,9 @@ body {
 
 /* Кнопка закрыть попап */
 .modal-container__close--button {
+  display: flex;
+  padding: 15px;
+  box-sizing: border-box;
   position: absolute;
   content: "close";
   width: 52px;
@@ -1429,7 +1437,6 @@ body {
   border-radius: 50%;
   background-color: #F2F2F2;
   border: none;
-  outline: none;
   top: 50px;
   right: 50px;
 }
@@ -1483,15 +1490,18 @@ body {
   line-height: 24px;
   color: #000000;
   background-color: #F2F2F2;
+  border: 3px solid #F2F2F2;
+  outline: none;
 }
 
 .container__form__field:hover {
   background-color: #E6E6E6;
+  border: 3px solid #E6E6E6;
 }
 
 .container__form__field:focus {
   border-radius: 4px;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   background-color: #E6E6E6;
 }
 
@@ -1566,8 +1576,6 @@ body {
   box-sizing: border-box;
   padding: 12px 20px;
   border-radius: 4px;
-  border: none;
-  outline: none;
   background-color: #F2F2F2;
   align-items: center;
   margin-left: auto;
@@ -1650,17 +1658,20 @@ input[type=number]::-webkit-outer-spin-button {
   outline: none;
 }
 
-.container__form--more:hover svg {
+.container__form--more:hover path {
   fill: #000000;
 }
 
 .container__form--more:focus svg {
-  fill: #000000;
   border-radius: 4px;
   outline: 3px solid #82B3D3;
 }
 
-.container__form--more:active svg {
+.container__form--more:focus path {
+  fill: #000000;
+}
+
+.container__form--more:active path {
   fill: rgba(0, 0, 0, 1);
 }
 
@@ -1673,17 +1684,20 @@ input[type=number]::-webkit-outer-spin-button {
   outline: none;
 }
 
-.container__form--less:hover svg {
+.container__form--less:hover path {
   fill: #000000;
 }
 
 .container__form--less:focus svg {
-  fill: #000000;
   border-radius: 4px;
   outline: 3px solid #82B3D3;
 }
 
-.container__form--less:active svg {
+.container__form--less:focus path {
+  fill: #000000;
+}
+
+.container__form--less:active path {
   fill: rgba(0, 0, 0, 1);
 }
 
@@ -1697,12 +1711,12 @@ button.container__form--icon {
   border: none;
   color: #000000;
   opacity: 0.3;
-  outline: none;
   width: 20px;
   height: 20px;
   padding: 2px 2px 3px 2px;
-  top: 12px;
+  top: 14px;
   right: 20px;
+  outline: none;
 }
 
 

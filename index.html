@@ -225,40 +225,38 @@
             <fieldset class="container__number__group container__form--adult">
               <label class="container__form__title" for="number">Взрослые:</label>
               <div class="container__form__count">
-                <button class="container__form--more">
-                  <span class="visually-hidden">Больше</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
-                </button>
-                <input class="container__form__number form__field--number" type="number" id="number" min="1" max="3">
                 <button class="container__form--less">
                   <span class="visually-hidden">Меньше</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z"/></svg>
                 </button>
+                <input class="container__form__number form__field--number" type="number" id="number" min="1" max="3">
+                <button class="container__form--more">
+                  <span class="visually-hidden">Больше</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                </button>
               </div>
             </fieldset>
             <fieldset class="container__number__group container__form--children">
-              <!--<span class="form__group__label">-->
-                <label class="container__form__title">Дети:</label>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                    <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4h2v2H9V4Zm2 12H9V7h2v9Z" fill="#fff"/>
-                    </svg>
-                  </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей,<br> которые будут с вами, возраст<br> которых от 6 до 18 лет. Дети <br>до 6 лет размещаются <br>бесплатно.</span>
-                </span>
-                <div class="container__form__count">
-                  <button class="container__form--more">
-                    <span class="visually-hidden">Больше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
-                  </button>
-                  <input class="container__form__number form__field--number" type="number" id="number" min="0" max="6">
-                  <button class="container__form--less">
-                    <span class="visually-hidden">Меньше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z"/></svg>
-                  </button>
-                </div>
-              <!--</span>-->
+              <label class="container__form__title">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                  <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4h2v2H9V4Zm2 12H9V7h2v9Z" fill="#fff"/>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей,<br> которые будут с вами, возраст<br> которых от 6 до 18 лет. Дети <br>до 6 лет размещаются <br>бесплатно.</span>
+              </span>
+              <div class="container__form__count">
+                <button class="container__form--less">
+                  <span class="visually-hidden">Меньше</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z"/></svg>
+                </button>
+                <input class="container__form__number form__field--number" type="number" id="number" min="0" max="6">
+                <button class="container__form--more">
+                  <span class="visually-hidden">Больше</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                </button>
+              </div>
             </fieldset>
           </form>
           <button class="search__button">
