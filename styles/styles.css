@@ -325,7 +325,7 @@ body {
 .main-page-welcome {
   display: flex;
   justify-content: center;
-  background-image: url(../images/pictures/sedona-main.jpg);
+  background-image: url("../images/pictures/sedona-main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #b1867d;
@@ -340,7 +340,7 @@ body {
   width: 1203px;
   height: 57px;
   bottom: 0;
-  background-image: url(../images/elements/main-picture-decor-bottom.svg);
+  background-image: url("../images/elements/main-picture-decor-bottom.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 1;
@@ -491,15 +491,15 @@ body {
 }
 
 .servises-item-house::before {
-  background-image: url(../images/advantages-icons/icon-house.svg);
+  background-image: url("../images/advantages-icons/icon-house.svg");
 }
 
 .servises-item-suvenirs::before {
-  background-image: url(../images/advantages-icons/icon-suvenirs.svg);
+  background-image: url("../images/advantages-icons/icon-suvenirs.svg");
 }
 
 .servises-item-food::before {
-  background-image: url(../images/advantages-icons/icon-food.svg);
+  background-image: url("../images/advantages-icons/icon-food.svg");
 }
 
 /*Вводная инфа о сервисе с кнопкой перехода*/
@@ -1467,7 +1467,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Стилизация звезд */
 .stars {
-  background-image: url(../images/elements/icon-star.svg);
+  background-image: url("../images/elements/icon-star.svg");
   background-repeat: space;
   height: 17px;
   align-self: center;
@@ -1497,10 +1497,20 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Пагинация */
 .pagination-list {
   display: flex;
-  width: 1060px;
   flex-wrap: wrap;
   margin-top: 40px;
   gap: 8px;
+  position: relative;
+}
+
+.pagination-list::before {
+  content: "";
+  position: absolute;
+  background-color: #E6E6E6;
+  width: 1060px;
+  padding: 1px;
+  bottom: 105px;
+  top: -40px;
 }
 
 .pagination-link {
@@ -1568,7 +1578,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .modal-container--hidden {
-      display: none;
+  display: none;
 }
 
 .modal-container__content {
@@ -1959,7 +1969,7 @@ button.container__form--icon:focus {
 }
 
 .tooltip-text::before {
-  background-image: url(../images/elements/triangle.svg);
+  background-image: url("../images/elements/triangle.svg");
   position: absolute;
   content: "";
   bottom: 100%;
