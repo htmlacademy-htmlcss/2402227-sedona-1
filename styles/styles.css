@@ -649,6 +649,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 31px 70px 18px 70px;
 }
 
@@ -698,6 +699,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   box-sizing: border-box;
   min-height: 50px;
 }
@@ -711,30 +713,35 @@ body {
   width: 331px;
 }
 
-.footer-contacts-address a[href^="tel:"] {
-  display: block;
-  color: #000000;
-  text-decoration-line: none;
+.footer-contacts-address-phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 331px;
   font-family: "PT Sans", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
+  color: #000000;
   text-transform: uppercase;
+  text-decoration-line: none;
   cursor: pointer;
   outline: none;
 }
 
-.footer-contacts-address a:hover {
+.footer-contacts-address-phone:hover {
   color: #756157;
 }
 
-.footer-contacts-address a:focus {
+.footer-contacts-address-phone:focus {
   color: #756157;
   outline: none;
 }
 
-.footer-contacts-address a:active {
+.footer-contacts-address-phone:active {
   color: #7561574d;
 }
 
