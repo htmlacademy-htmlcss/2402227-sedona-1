@@ -1554,7 +1554,7 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 26px;
 }
 
-/* Модальное окно */
+/* Модальное окно на Grid */
 .modal-container {
   position: fixed;
   top: 0;
@@ -1698,12 +1698,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .container__form--checkin {
   grid-column: 1 / -1;
-  grid-row: 1 / 2;
 }
 
 .container__form--checkout {
   grid-column: 1 / -1;
-  grid-row: 2 / 3;
 }
 
 /* Стилизация Даты Заезд-Выезд */
@@ -1720,12 +1718,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .container__form__title {
   grid-column: 1 / 2;
-  grid-row: 1;
 }
 
 .container__form__field {
   grid-column: 2 / -1;
-  grid-row: 1;
 }
 
 .form__field--subject {
@@ -1747,18 +1743,6 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 0;
   border: none;
   position: relative;
-}
-
-.container__form--adult {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-}
-
-.container__form--children {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
 }
 
 .container__form--children .container__form__count {
@@ -1797,7 +1781,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .container__form__description {
   grid-column: 2 / -1;
-  grid-row: 2;
   margin: 0;
   margin-top: 2px;
   padding: 1px 23px;
